@@ -11,7 +11,8 @@
 \frenchspacing						% better looking spacing
 
 % Call packages we'll need
-\usepackage[english]{babel}			% english
+\usepackage{CJK,CJKnumb}
+%usepackage[english]{babel}			% english
 \usepackage{graphicx}				% images
 \usepackage{amssymb,amsmath}		% math
 \usepackage{multicol}				% three-column layout
@@ -39,6 +40,27 @@
 \usepackage{lmodern}%微元\dj
 \usepackage{booktabs} %三线表
 \usepackage{tabularx} %表格自动换行
+%\usepackage{titlesec}
+%\titleformat{\chapter}{\heiti\huge\bfseries\center}
+
+
+% 使用 tocloft 宏包控制目录样式
+%\usepackage{tocloft}
+
+% 设置目录中条目和页码之间的点
+%\renewcommand{\cftdotsep}{1}  % 设置点之间的间隔（1是较小的间隔值，默认9）
+%\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}  % 章节标题使用点引导线
+%\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}  % 小节标题使用点引导线
+
+\ctexset{
+    chapter = {
+        format = \centering\Huge\bfseries\heiti,  % 字号和字体，例如：二号字，黑体
+        name = {第, 章},           % 章节前后的文字，例：第1章
+        number = \chinese{chapter},% 使用中文数字编号
+        aftername = \quad          % 章节标题与数字之间的空隙
+    }
+}
+
 
 \usetikzlibrary{calc}
 \tcbuselibrary{breakable}
@@ -88,3 +110,12 @@
 \renewcommand{\bar}{\overline}%平均值
 \renewcommand{\vec}{\boldsymbol}%粗体向量
 %\renewcommand{\vec}{\overrightarrow}%向量箭头
+
+\newcounter{problem}
+\setcounter{problem}{0}
+\newcommand{\problem}[1]{%
+        \refstepcounter{problem}%
+        {\bfseries{\thechapter.\theproblem\quad } #1}%
+    \vspace{5pt}%
+}
+\newtheorem{solution}{参考解答}[problem]
