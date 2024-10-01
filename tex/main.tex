@@ -2,10 +2,10 @@
 \input{setting.tex}
 
 \title{\huge \heiti{高显经典力学习题解答}}
-\author{ \ttfamily \texttt  数据风暴中的避风港\\
-\ttfamily \texttt \small 二〇二四年\\}
-\date{\small \today}
+\author{ \ttfamily \texttt \Large 数据风暴中的避风港\\}
+\date{\large \today}
 
+\renewcommand{\today}{二〇二四年\CJKnumber\month 月\CJKnumber\day 日}
 
 \begin{document}
 \maketitle
@@ -14,27 +14,86 @@
 \fancyhf{}
 \fancyhead{}
 ~\vfill
-\noindent \textsc{School of Physical Sciences, University of Science and Technology of China}\\
+\noindent \textit{数据风暴中的避风港 }\textsc{ 社区成员共同编写，本习题解答及其\LaTeX 代码符合 MIT 许可.}\\
 
-\noindent \textit{First release, 2024} % Printing/edition date
+\noindent \textsc{链接：https://github.com/Phiyu/GaoXian.}\\
 
-    \pagestyle{fancy}
-    \fancyhf{}
-    \fancyhead[R]{目录}
-    \pagenumbering{arabic}
-    \setcounter{page}{1}
-    \tableofcontents
+\noindent \textsc{编写成员均为物理专业或非物理专业的物理爱好者，编写过程中难免有许多纰漏，欢迎指出，也欢迎加入}
+\textit{ 数据风暴中的避风港 } 
+\textsc{大家庭（QQ群：832100706） .}\\
 
-    \newpage
-\pagestyle{fancy}e
-\lhead{Note\; }
-\chead{}
-\rhead{}
-\lfoot{}
+\noindent \textit{\number\year 年 \number\month 月} % Printing/edition date
+
+\tableofcontents
+
+\newpage
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyhead[LE]{\kaishu \leftmark}
+\fancyhead[RE]{\kaishu 习题解答}
+\fancyhead[RO]{\kaishu \leftmark}
+\fancyhead[LO]{\kaishu 习题解答}
+\fancyfoot[LE]{\kaishu 高显经典力学习题解答}
+\fancyfoot[RE]{\kaishu 数据风暴中的避风港}
+\fancyfoot[LO]{\kaishu 数据风暴中的避风港}
+\fancyfoot[RO]{\kaishu 高显经典力学习题解答}
 \cfoot{\thepage}
-\rfoot{}
+
 \pagenumbering{arabic}
 \setcounter{page}{1}
+
+\setcounter{problem}{0}
+\newpage
+\input{content/Ch1.tex}
+
+\setcounter{problem}{0}
+\newpage 
+\input{content/Ch2.tex}
+
+\newpage
+\input{content/Ch3.tex}
+
+\newpage 
+\input{content/Ch4.tex}
+
+\newpage
+\input{content/Ch5.tex}
+
+\newpage 
+\input{content/Ch6.tex}
+
+\newpage
+\input{content/Ch7.tex}
+
+\newpage 
+\input{content/Ch8.tex}
+
+\newpage
+\input{content/Ch9.tex}
+
+\newpage 
+\input{content/Ch10.tex}
+
+\newpage
+\input{content/Ch11.tex}
+
+\newpage 
+\input{content/Ch12.tex}
+
+\newpage
+\input{content/Ch13.tex}
+
+\newpage 
+\input{content/Ch14.tex}
+
+\newpage
+\input{content/Ch15.tex}
+
+\newpage 
+\input{content/Ch16.tex}
+
+\newpage
+\input{content/Ch17.tex}
 
 
 \end{document}
