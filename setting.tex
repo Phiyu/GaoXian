@@ -1,0 +1,90 @@
+\setlength\topmargin{-48pt}
+\setlength\headheight{0pt}
+\setlength\headsep{25pt}
+\setlength\marginparwidth{-20pt}
+\setlength\textwidth{7.0in}
+\setlength\textheight{9.5in}
+\setlength\oddsidemargin{-30pt}
+\setlength\evensidemargin{-30pt}
+
+
+\frenchspacing						% better looking spacing
+
+% Call packages we'll need
+\usepackage[english]{babel}			% english
+\usepackage{graphicx}				% images
+\usepackage{amssymb,amsmath}		% math
+\usepackage{multicol}				% three-column layout
+\usepackage{url,ctex,tikz}					% clickable links
+\usepackage{marvosym}				% symbols
+\usepackage{wrapfig}				% wrapping text around figures
+\usepackage[T1]{fontenc}			% font encoding
+\usepackage{charter} 				% Charter font for main content
+\usepackage{datetime}				% custom date
+\usepackage{mdframed} 
+\usepackage{lipsum}%ダミーの文章を入れる
+\usepackage{capt-of}
+\usepackage[margin=2cm]{geometry}
+\usepackage{tcolorbox}
+\usepackage{varwidth}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{varwidth}
+\usepackage{tikz}
+\usepackage{pdfpages}
+\usepackage{authblk}
+\usepackage{mathrsfs}%\mathscr字体
+\usepackage{esint}%环路积分
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}%微元\dj
+\usepackage{booktabs} %三线表
+\usepackage{tabularx} %表格自动换行
+
+\usetikzlibrary{calc}
+\tcbuselibrary{breakable}
+\tcbuselibrary{skins}
+\tcbuselibrary{xparse}%xparse . sty定义的NewDocumentCommand
+\usepackage{setspace}
+\linespread{1.3}
+
+\everymath{\displaystyle}
+
+
+\usepackage{xpinyin}
+\definecolor{frameinnercolor}{RGB}{0,112,131}%{249,179,72}
+
+
+	\newdateformat{mydate}{\monthname[\THEMONTH] \THEYEAR}
+\usepackage[pdfpagemode=FullScreen,
+			colorlinks=false]{hyperref}	% links and pdf behaviour
+
+
+%————版面设置————%
+\usepackage{fancyhdr}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headwidth}{\textwidth}
+\renewcommand{\footrulewidth}{0pt}
+
+\usepackage{physics}
+
+\usepackage{gbt7714}
+\newtheorem{definition}{\hspace{2em}定义}[chapter]
+\newtheorem{theorem}{\hspace{2em}定理}[chapter]
+\newtheorem{law}{\hspace{2em}定律}[chapter]
+\newtheorem{equa}{\hspace{2em}公式}[chapter]
+\newtheorem{lemma}{\hspace{2em}引理}[chapter]
+\newtheorem{proof}{证明}[chapter]
+\newtheorem{proposition}{\hspace{2em}命题}[chapter]
+\newtheorem{corollary}{\hspace{2em}推论}[chapter]
+\newtheorem{remark}{\hspace{2em}注}[chapter]
+
+\newcommand{\pp}{\partial}%偏导数
+\newcommand{\me}{\mathrm e}%自然底数
+\newcommand{\mi}{\mathrm i}%虚数单位
+\newcommand{\mj}{\mathrm j}%虚数单位
+\newcommand{\mk}{\mathrm k}%虚数单位
+\newcommand{\dps}{\displaystyle}%行间公式
+\newcommand{\degree}{^\circ}%角度
+\renewcommand{\bar}{\overline}%平均值
+\renewcommand{\vec}{\boldsymbol}%粗体向量
+%\renewcommand{\vec}{\overrightarrow}%向量箭头
