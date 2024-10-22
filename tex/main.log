@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.7.2)  21 OCT 2024 12:23
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.7.2)  22 OCT 2024 16:00
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -39,8 +39,8 @@ LaTeX Font Info:    Redeclaring font encoding TS1 on input line 47.
 File: ctexopts.cfg 2022/07/14 v2.5.10 Option configuration file (CTEX)
 ) (d:/Code/texlive/2023/texmf-dist/tex/latex/base/book.cls
 Document Class: book 2023/05/17 v1.4n Standard LaTeX document class
-(d:/Code/texlive/2023/texmf-dist/tex/latex/base/bk12.clo
-File: bk12.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
+(d:/Code/texlive/2023/texmf-dist/tex/latex/base/bk11.clo
+File: bk11.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
 )
 \c@part=\count188
 \c@chapter=\count189
@@ -1162,12 +1162,12 @@ File: fc-english.def 2016/01/12
 * \topmargin=-40.36449pt
 * \headheight=0.0pt
 * \headsep=25.0pt
-* \topskip=12.0pt
-* \footskip=30.0pt
+* \topskip=11.0pt
+* \footskip=27.46295pt
 * \marginparwidth=-20.0pt
 * \marginparsep=7.0pt
 * \columnsep=10.0pt
-* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -1266,7 +1266,7 @@ LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 1
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 17.
+(Font)              <10.95> on input line 17.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <8> on input line 17.
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -1314,9 +1314,14 @@ LaTeX Font Warning: Font shape `TU/SimHei(0)/b/n' undefined
 
 ] (./content/Ch1.tex
 第一章
-) [1
 
-] (./content/Ch2.tex
+Underfull \hbox (badness 10000) in paragraph at lines 27--27
+
+ []
+
+[1
+
+])
 
 Package fontspec Info: Could not resolve font "KaiTi/BI" (it probably doesn't
 (fontspec)             exist).
@@ -1343,16 +1348,16 @@ Package fontspec Info: Font family 'KaiTi(0)' created for font 'KaiTi' with
 
 
 Package fancyhdr Warning: \headheight is too small (0.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-14.49998pt}.
+(fancyhdr)                \addtolength{\topmargin}{-13.59999pt}.
 
-[2
-
-]
+[2] (./content/Ch2.tex
 第二章
-) [3] (./content/Ch3.tex) (./content/Ch4.tex) (./content/Ch5.tex) (./content/Ch6.tex) (./content/Ch7.tex) (./content/Ch8.tex) (./content/Ch9.tex) (./content/Ch10.tex) (./content/Ch11.tex) (./content/Ch12.tex) (./content/Ch13.tex) (./content/Ch14.tex) (./content/Ch15.tex) (./content/Ch16.tex) (./content/Ch17.tex) (./main.aux)
+) [3
+
+] (./content/Ch3.tex) (./content/Ch4.tex) (./content/Ch5.tex) (./content/Ch6.tex) (./content/Ch7.tex) (./content/Ch8.tex) (./content/Ch9.tex) (./content/Ch10.tex) (./content/Ch11.tex) (./content/Ch12.tex) (./content/Ch13.tex) (./content/Ch14.tex) (./content/Ch15.tex) (./content/Ch16.tex) (./content/Ch17.tex) (./main.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2022/07/14>
@@ -1365,11 +1370,11 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 27E26677E901A742ECF0D3EE874ADE86;142.
  ) 
 Here is how much of TeX's memory you used:
- 83619 strings out of 475889
- 1763246 string characters out of 5779806
- 1915869 words of memory out of 5000000
- 103911 multiletter control sequences out of 15000+600000
- 607110 words of font info for 104 fonts, out of 8000000 for 9000
+ 83608 strings out of 475889
+ 1762239 string characters out of 5779806
+ 1929869 words of memory out of 5000000
+ 103897 multiletter control sequences out of 15000+600000
+ 610106 words of font info for 106 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  93i,12n,97p,1225b,47349s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
