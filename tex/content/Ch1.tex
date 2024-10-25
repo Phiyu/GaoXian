@@ -63,3 +63,33 @@
         \end{aligned}
     \]
 \end{solution}
+
+\problem{给定二元函数\(f(t,x)\)的泛函\(S[f]=\iint \dd t \dd x \frac12 \left[
+    \left(\frac{\pp f(t,x)}{\pp t}\right)^2 - \left(\frac{\pp f(t,x)}{\pp x}\right)^2 -m^2f^2(t,x)
+\right]\)，其中\(m\)是常数。求泛函\(S[f]\)取极值时\(f(t,x)\)的欧拉-拉格朗日方程。}
+\begin{solution}
+    泛函\(S[f]\)的Lagrange函数为\(L(t,x,f,f_t,f_x) = \frac12(f_t^2-f_x^2-m^2f^2)\)，则
+    \[
+    \begin{aligned}
+        \delta S & = \iint \dd t \dd x \delta L \\
+                 & \simeq \iint \dd t \dd x \left[
+                    \frac{\pp L}{\pp f} - \frac{\pp}{\pp t}\left( \frac{\pp L}{\pp f_t} \right) - \frac{\pp}{\pp x}\left( \frac{\pp L}{\pp f_x} \right)
+                    \right] \\
+                 \right] \\
+                 & = \iint \dd t \dd x  
+                 (-m^2f - f_{tt} + f_{xx})
+                 \delta f
+    \end{aligned}
+    \]
+    取极值有\(-\frac{\pp S}{\pp f}=0\)，即\(f_{tt} - f_{xx} + -m^2f = 0\)
+\end{solution}
+
+\problem{考虑一条不可拉伸、质量均匀的柔软细绳，长为\(l\)，质量为\(m\)。细绳两端点悬挂于相同高度，水平距离为\(a\)(\(a<l\)。
+    \begin{enumerate}[label=(\arabic*)]
+        \item 选择合适的坐标，求细绳总的重力势能\(V\)作为细绳形状的泛函；
+        \item 求细绳重力势能取极值时，细绳形状所满足的欧拉-拉格朗日方程。
+    \end{enumerate}}
+\begin{solution}
+    待施工
+\end{solution}
+
