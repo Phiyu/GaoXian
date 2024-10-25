@@ -86,7 +86,7 @@
     \]
     取极值有\(-\frac{\pp S}{\pp f}=0\)，即\(f_{tt} - f_{xx} + -m^2f = 0\)
 \end{solution}
-% updated by: Moyufishy
+% updated by: Phiyu
 % date: 2024/10/25
 
 \problem{考虑一条不可拉伸、质量均匀的柔软细绳，长为\(l\)，质量为\(m\)。细绳两端点悬挂于相同高度，水平距离为\(a\)(\(a<l\))。
@@ -98,28 +98,32 @@
     \begin{enumerate}[label=(\arabic*)]
         \item 取细绳所在平面建立笛卡尔系，设悬点为\( \vec{x_1}=(0,0) \)，\( \vec{x_2}=(a,0) \)，
         竖直向下为\(y\)轴正方向，设细绳形状为\( y=y(x) \) ( \( 0 \leq x \leq a \) )，可知细绳线密度为\( \lambda = \frac{m}{l} \)，则
+        \[
         \begin{aligned}
             V[y] &= \int -(\lambda \dd L) gy \\
                  &= -\frac{mg}{l} \int_0^a y\sqrt{1+y'^2} \dd x
         \end{aligned}
+        \]
         \item 泛函\(V[y]\)的Lagrange函数为\( L(x,y,y')=-\frac{mg}{l}y\sqrt{1+y'^2} \)，重力势能取极值有
+        \[
         \begin{aligned}
             -\frac{\pp S}{\pp y} &= \frac{\dd}{\dd x} \left( \frac{\pp L}{\pp y'} \right) - \frac{\pp L}{\pp y} \\
                                  &= -\frac{mg}{l} \left[  
                                  \frac{\dd}{\dd x} \left( \frac{yy'}{\sqrt{1+y'^2}} \right) - \sqrt{1+y'^2} 
                                  \right] \\
-                                 &= \left( 
+                                 &= -\frac{mg}{l} \left( 
                                  \frac{y'^2}{\sqrt{1+y'^2}} + \frac{yy''}{\sqrt{1+y'^2}} - \frac{yy'^2y''}{ (1+y'^2)^{3/2} } - \sqrt{1+y'^2} 
                                  \right) = 0
         \end{aligned}
+        \]
         将最后一式化简得到：\( yy'' - y'^2 - 1 = 0 \) ，此即著名的悬链线满足的微分方程。
-    \end{enumerate}}
+    \end{enumerate}
 \end{solution}
 % updated by: Moyufishy
-% date: 2024/10/25
+% date: 2024/10/26
 
 \problem{考虑3维欧氏空间中的任意2维曲面，取直角坐标，曲面方程为\( z=z(x,y) \)。曲面上任意两
-    固定点，由曲面上的任一曲线连接。曲线方程为\( \x=x(\lambda) \)，\( y=y(\lambda) \)，这里的
+    固定点，由曲面上的任一曲线连接。曲线方程为\( x=x(\lambda) \)，\( y=y(\lambda) \)，这里的
     \( \lambda \)是曲线的参数。
     \begin{enumerate}[label=(\arabic*)]
         \item 求曲线的长度\(S\)作为\( x(\lambda) \)和\( y(\lambda) \)的泛函\( S[x,y] \)；
@@ -135,4 +139,4 @@
     待施工
 \end{solution}
 % updated by: Moyufishy
-% date: 2024/10/25
+% date: 2024/10/26
