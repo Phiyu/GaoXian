@@ -70,9 +70,9 @@
 
 \problem{给定二元函数\(f(t,x)\)的泛函\(S[f]=\iint \dd t \dd x \frac12 \left[
     \left(\frac{\pp f(t,x)}{\pp t}\right)^2 - \left(\frac{\pp f(t,x)}{\pp x}\right)^2 -m^2f^2(t,x)
-\right]\)，其中\(m\)是常数。求泛函\(S[f]\)取极值时\(f(t,x)\)的欧拉-拉格朗日方程。}
+\right]\), 其中\(m\)是常数. 求泛函\(S[f]\)取极值时\(f(t,x)\)的欧拉-拉格朗日方程. }
 \begin{solution}
-    泛函\(S[f]\)的Lagrange函数为\(L(t,x,f,f_t,f_x) = \frac12(f_t^2-f_x^2-m^2f^2)\)，则
+    泛函\(S[f]\)的Lagrange函数为\(L(t,x,f,f_t,f_x) = \frac12(f_t^2-f_x^2-m^2f^2)\), 则
     \[
     \begin{aligned}
         \delta S & = \iint \dd t \dd x \delta L \\
@@ -84,27 +84,27 @@
                  \delta f
     \end{aligned}
     \]
-    取极值有\(-\frac{\delta S}{\delta f}=0\)，即\(f_{tt} - f_{xx} + -m^2f = 0\)
+    取极值有\(-\frac{\delta S}{\delta f}=0\), 即\(f_{tt} - f_{xx} + -m^2f = 0\)
 \end{solution}
 % updated by: Phiyu
 % date: 2024/10/25
 
-\problem{考虑一条不可拉伸、质量均匀的柔软细绳，长为\(l\)，质量为\(m\)。细绳两端点悬挂于相同高度，水平距离为\(a\)(\(a<l\))。
+\problem{考虑一条不可拉伸、质量均匀的柔软细绳, 长为\(l\), 质量为\(m\). 细绳两端点悬挂于相同高度, 水平距离为\(a\)(\(a<l\)). 
     \begin{enumerate}[label=(\arabic*)]
-        \item 选择合适的坐标，求细绳总的重力势能\(V\)作为细绳形状的泛函；
-        \item 求细绳重力势能取极值时，细绳形状所满足的欧拉-拉格朗日方程。
+        \item 选择合适的坐标, 求细绳总的重力势能\(V\)作为细绳形状的泛函; 
+        \item 求细绳重力势能取极值时, 细绳形状所满足的欧拉-拉格朗日方程. 
     \end{enumerate}}
 \begin{solution}
     \begin{enumerate}[label=(\arabic*)]
-        \item 取细绳所在平面建立笛卡尔系，设悬点为\( \vec{x_1}=(0,0) \)，\( \vec{x_2}=(a,0) \)，
-        竖直向下为\(y\)轴正方向，设细绳形状为\( y=y(x) \) ( \( 0 \leq x \leq a \) )，可知细绳线密度为\( \lambda = \frac{m}{l} \)，则
+        \item 取细绳所在平面建立笛卡尔系, 设悬点为\( \vec{x_1}=(0,0) \), \( \vec{x_2}=(a,0) \), 
+        竖直向下为\(y\)轴正方向, 设细绳形状为\( y=y(x) \) ( \( 0 \leq x \leq a \) ), 可知细绳线密度为\( \lambda = \frac{m}{l} \), 则
         \[
         \begin{aligned}
             V[y] &= \int -(\lambda \dd L) gy \\
                  &= -\frac{mg}{l} \int_0^a y\sqrt{1+y'^2} \dd x
         \end{aligned}
         \]
-        \item 泛函\(V[y]\)的Lagrange函数为\( L(x,y,y')=-\frac{mg}{l}y\sqrt{1+y'^2} \)，重力势能取极值有
+        \item 泛函\(V[y]\)的Lagrange函数为\( L(x,y,y')=-\frac{mg}{l}y\sqrt{1+y'^2} \), 重力势能取极值有
         \[
         \begin{aligned}
             -\frac{\delta S}{\delta y} &= \frac{\dd}{\dd x} \left( \frac{\pp L}{\pp y'} \right) - \frac{\pp L}{\pp y} \\
@@ -116,23 +116,23 @@
                                  \right) = 0
         \end{aligned}
         \]
-        将最后一式化简得到：\( yy'' - y'^2 - 1 = 0 \) ，此即著名的悬链线满足的微分方程。
+        将最后一式化简得到：\( yy'' - y'^2 - 1 = 0 \) , 此即著名的悬链线满足的微分方程. 
     \end{enumerate}
 \end{solution}
 % updated by: Moyufishy
 % date: 2024/10/26
 
-\problem{考虑3维欧氏空间中的任意2维曲面，取直角坐标，曲面方程为\( z=z(x,y) \)。曲面上任意两
-    固定点，由曲面上的任一曲线连接。曲线方程为\( x=x(\lambda) \)，\( y=y(\lambda) \)，这里的
-    \( \lambda \)是曲线的参数。
+\problem{考虑3维欧氏空间中的任意2维曲面, 取直角坐标, 曲面方程为\( z=z(x,y) \). 曲面上任意两
+    固定点, 由曲面上的任一曲线连接. 曲线方程为\( x=x(\lambda) \), \( y=y(\lambda) \), 这里的
+    \( \lambda \)是曲线的参数. 
     \begin{enumerate}[label=(\arabic*)]
-        \item 求曲线的长度\(S\)作为\( x(\lambda) \)和\( y(\lambda) \)的泛函\( S[x,y] \)；
-        \item 求曲线长度\(S\)取极值时，\( x(\lambda) \)和\( y(\lambda) \)的欧拉-拉格朗日方程；
-        \item 当曲面为以下情况时，求解\( x(\lambda) \)和\( y(\lambda) \)：
+        \item 求曲线的长度\(S\)作为\( x(\lambda) \)和\( y(\lambda) \)的泛函\( S[x,y] \); 
+        \item 求曲线长度\(S\)取极值时, \( x(\lambda) \)和\( y(\lambda) \)的欧拉-拉格朗日方程; 
+        \item 当曲面为以下情况时, 求解\( x(\lambda) \)和\( y(\lambda) \)：
         \begin{enumerate}[label=(\arabic{enumi}.\arabic*)]
-            \item 平面\( z = ax + by + c \) ( \(a\)，\(b\)，\(c\)为常数 )；
-            \item 球面\( z = \sqrt{R^2 - x^2 - y^2} \) ( \(R\)为常数 )；
-            \item 锥面\( z = H \left( 1-\frac{1}{R}\sqrt{x^2+y^2} \right) \) ( \(H\)，\(R\)为常数 )。
+            \item 平面\( z = ax + by + c \) ( \(a\), \(b\), \(c\)为常数 ); 
+            \item 球面\( z = \sqrt{R^2 - x^2 - y^2} \) ( \(R\)为常数 ); 
+            \item 锥面\( z = H \left( 1-\frac{1}{R}\sqrt{x^2+y^2} \right) \) ( \(H\), \(R\)为常数 ). 
         \end{enumerate}
     \end{enumerate}}
 \begin{solution}
@@ -141,19 +141,19 @@
 % updated by: Moyufishy
 % date: 2024/10/26
 
-\problem{假设地球质量均匀分布，密度为\( \rho \)，半径为\(R\)。如图1.9所示，在地球内部钻一个光滑隧道，隧道处于过球心的大圆平面内。一个物体从\(A\)点静止滑入，则最终将由\(B\)点滑出。在轨道平面取极坐标\( \{r,\phi\} \)，求轨道形状\( r(\phi) \)满足什么方程时物体穿过隧道的时间最短。（提示：地球内部距离中心\(r\)处质量为\(m\)的粒子的牛顿引力势能为\( U(r)=\frac23 \pi Gm\rho r^2 \)，其中\(G\)为牛顿引力常数。） }
+\problem{假设地球质量均匀分布, 密度为\( \rho \), 半径为\(R\). 如图1.9所示, 在地球内部钻一个光滑隧道, 隧道处于过球心的大圆平面内. 一个物体从\(A\)点静止滑入, 则最终将由\(B\)点滑出. 在轨道平面取极坐标\( \{r,\phi\} \), 求轨道形状\( r(\phi) \)满足什么方程时物体穿过隧道的时间最短. （提示：地球内部距离中心\(r\)处质量为\(m\)的粒子的牛顿引力势能为\( U(r)=\frac23 \pi Gm\rho r^2 \), 其中\(G\)为牛顿引力常数. ） }
 \begin{solution}
-    考察\(A\)、\(B\)与地球球心形成的平面，以球心为极点，设极坐标下\(A\)点坐标为\( (R,\phi_1) \)，\(B\)点为\( (R,\phi_2) \)。
-    对于一个从\(A\)静止释放的粒子，运动到\( r(\phi) \)处速度为
+    考察\(A\)、\(B\)与地球球心形成的平面, 以球心为极点, 设极坐标下\(A\)点坐标为\( (R,\phi_1) \), \(B\)点为\( (R,\phi_2) \). 
+    对于一个从\(A\)静止释放的粒子, 运动到\( r(\phi) \)处速度为
     \[
         v(r) = \sqrt{\frac{2T}{m}} = \sqrt{\frac{2\Delta U(r)}{m}} = \sqrt{\frac43 \pi G \rho (R^2-r^2)}
     \]
-    考虑到极坐标下线元为\( \dd s^2 = \dd r^2 + (r\dd \phi)^2 \)，则沿着轨道从\(A\)到\(B\)的运动总时间为\( r(\phi) \)的泛函，表达式为
+    考虑到极坐标下线元为\( \dd s^2 = \dd r^2 + (r\dd \phi)^2 \), 则沿着轨道从\(A\)到\(B\)的运动总时间为\( r(\phi) \)的泛函, 表达式为
     \[
         T[r] = \int \frac{\dd s}{v}
              = \int_{\phi_1}^{\phi_2} \frac{ \sqrt{r'^2+r^2} }{ \sqrt{\frac43 \pi G \rho (R^2-r^2)} }\dd \phi
     \]
-    该泛函的等效Lagrange函数为\( L(r,r')= \sqrt{\frac{r'^2+r^2}{R^2-r^2}} \)，取极值时满足欧拉-拉格朗日方程：
+    该泛函的等效Lagrange函数为\( L(r,r')= \sqrt{\frac{r'^2+r^2}{R^2-r^2}} \), 取极值时满足欧拉-拉格朗日方程：
     \[
     \begin{aligned}
         \frac{\dd}{\dd \phi} \left( \frac{\pp L}{\pp r'} \right) - \frac{\pp L}{\pp r}
@@ -169,10 +169,10 @@
 % updated by: Moyufishy
 % date: 2024/10/26
 
-\problem{数学上将面积取极值的曲面称作极小曲面。如图1.10所示，\( \{x,y\} \)-平面上给定的\(A\)点和\(B\)点之间有曲线\( y(x) \)，此曲线绕\(x\)轴旋转而成旋转曲面。
+\problem{数学上将面积取极值的曲面称作极小曲面. 如图1.10所示, \( \{x,y\} \)-平面上给定的\(A\)点和\(B\)点之间有曲线\( y(x) \), 此曲线绕\(x\)轴旋转而成旋转曲面. 
     \begin{enumerate}
-        \item 求此旋转曲面面积取极小值时\( y(x) \)满足的微分方程；
-        \item 求\( y(x) \)的解。
+        \item 求此旋转曲面面积取极小值时\( y(x) \)满足的微分方程; 
+        \item 求\( y(x) \)的解. 
     \end{enumerate}
 }
 \begin{solution}
@@ -181,11 +181,11 @@
 % updated by: Moyufishy
 % date: 2024/10/26
 
-\problem{并不是所有的微分方程都是欧拉-拉格朗日方程。
+\problem{并不是所有的微分方程都是欧拉-拉格朗日方程. 
     \begin{enumerate}
-        \item 证明\( f''(t)+2\lambda f'(t)+\omega^2f(t) = 0 \)（\( \lambda,\omega \)是常数）在\( \lambda \neq 0 \)时不是欧拉-拉格朗日方程；
-        \item 引入新变量\( q = \me^{\lambda t}f \)，求\(q\)所满足的方程；
-        \item 求\(q\)的方程作为欧拉-拉格朗日方程所对应的泛函\( \tilde{S}[q] \)。
+        \item 证明\( f''(t)+2\lambda f'(t)+\omega^2f(t) = 0 \)（\( \lambda,\omega \)是常数）在\( \lambda \neq 0 \)时不是欧拉-拉格朗日方程; 
+        \item 引入新变量\( q = \me^{\lambda t}f \), 求\(q\)所满足的方程; 
+        \item 求\(q\)的方程作为欧拉-拉格朗日方程所对应的泛函\( \tilde{S}[q] \). 
     \end{enumerate}
 }
 \begin{solution}
