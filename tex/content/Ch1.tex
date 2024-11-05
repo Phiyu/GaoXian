@@ -175,7 +175,7 @@
 \end{solution}
 
 \problem{数学上将面积取极值的曲面称作极小曲面. 如图1.10所示, \( \{x,y\} \)-平面上给定的\(A\)点和\(B\)点之间有曲线\( y(x) \), 此曲线绕\(x\)轴旋转而成旋转曲面. 
-    \begin{enumerate}
+    \begin{enumerate}[label=(\arabic*)]
         \item 求此旋转曲面面积取极小值时\( y(x) \)满足的微分方程; 
         \item 求\( y(x) \)的解. 
     \end{enumerate}
@@ -185,17 +185,17 @@
 \end{solution}
 
 \problem{并不是所有的微分方程都是欧拉-拉格朗日方程. 
-    \begin{enumerate}
+    \begin{enumerate}[label=(\arabic*)]
         \item 证明\( f''(t)+2\lambda f'(t)+\omega^2f(t) = 0 \)（\( \lambda,\omega \)是常数）在\( \lambda \neq 0 \)时不是欧拉-拉格朗日方程; 
         \item 引入新变量\( q = \me^{\lambda t}f \), 求\(q\)所满足的方程; 
         \item 求\(q\)的方程作为欧拉-拉格朗日方程所对应的泛函\( \tilde{S}[q] \). 
     \end{enumerate}
 }
 \begin{solution}
-    \begin{enumerate}
+    \begin{enumerate}[label=(\arabic*)]
         \item 假设存在泛函\(S[f]=\int L(t,f,f') \dd t\)满足:
         \[
-        \frac{\pp S}{\pp f}=L_f-\frac{\dd}{\dd t}(L_{f'})=f''+2\lambda f'+\omega^2 f
+        \frac{\delta S}{\delta f}=L_f-\frac{\dd}{\dd t}(L_{f'})=f''+2\lambda f'+\omega^2 f
         \]
         将此式化简可得到:
         \[
@@ -205,7 +205,7 @@
         \[
         L(t,f,f')=-\frac12f'^2+C_1(f,t)f'+C_2(f,t)
         \]
-        将该形式带入欧拉-拉格朗日方程化简有:
+        其中\(C_1(f,t),C_2(f,t)\)的具体形式待定,将该解带入欧拉-拉格朗日方程化简有:
         \[
         \frac{\pp C_2}{\pp f}(f,t)-\frac{\pp C_1}{\pp t}(f,t)=2\lambda f'+\omega^2f
         \]
@@ -213,11 +213,12 @@
         \item 将\(f(t)=\me ^{-\lambda t}q(t)\)带入原方程,容易化简得到:\[
         q''(t)+(\omega^2 - \lambda^2)q(t)=0
         \]
-        \item 与(1)中讨论类似,将所用符号对应替换即可:\((S,L,F;\lambda,\omega^2)\rightarrow(\tilde{S},\tilde{L},q;0,\omega^2-\lambda^2)\),替换后得到：
+        \item 与(1)中讨论类似,将所用符号对应替换即可:\((S,L,f;\lambda,\omega^2)\rightarrow(\tilde{S},\tilde{L},q;0,\omega^2-\lambda^2)\),替换后得到：
         \[
         \begin{cases}
             \tilde{L}(t,q,q')=-\frac12q'^2+C_1(q,t)q'+C_2(q,t)\\
-            \frac{\pp C_2}{\pp q}(q,t)-\frac{\pp C_1}{\pp t}(q,t)=(\omega^2-\lambda^2)f
+            \\
+            \frac{\pp C_2}{\pp q}(q,t)-\frac{\pp C_1}{\pp t}(q,t)=(\omega^2-\lambda^2)q
         \end{cases}
         \]
         不妨取\(C_1(q,t)=0,C_2(q,t)=\frac12(\omega^2-\lambda^2)q^2\),我们就能得到:
@@ -226,7 +227,7 @@
             \frac12q'^2-\frac12(\omega^2-\lambda^2)q^2
         \right)\dd t
         \]
-        不难看出,这里的Lagrange函数满足谐振子的形式。
+        不难看出,新变量\(q\)的Lagrange函数满足谐振子的形式。
     \end{enumerate}
 \end{solution}
 
