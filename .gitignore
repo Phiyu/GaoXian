@@ -1,0 +1,29 @@
+# LaTeX auxiliary files
+*.aux
+*.bbl
+*.blg
+*.dvi
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.idx
+*.ptc
+*.fdb_latexmk
+*.bcf
+*.synctex.gz
+*.run.xml
+*.ist
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+
+# Directory for LaTeX build output
+/build/
+
+# Mac
+*.DS_Store
