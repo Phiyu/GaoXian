@@ -17,8 +17,6 @@
         - \frac{\delta S}{\delta f} = - V \frac{\dd V}{\dd f} f' \me^{-V(f(t))} \frac{f'}{\sqrt{1-f'^2}} + \me^{-V(f(t))} \frac{f'' + (1-f')f'^2}{(1 - f'^2)^{3/2}} - V \frac{\dd V}{\dd f} \me^{- V(f(t))} \sqrt{1-f'^2} = 0
     \]
 \end{solution}
-% updated by: AmillyW
-% date: 2024/10/22
 
 \problem{给定\(f(t)\)的泛函\(S[f] = \int \dd t\,L\), 其中\(L = (f'(t))^2 + f(t) f'(t)+ \frac{1}{2} f(t) f''(t)\).\\[-0.8em]
     \begin{enumerate}[label=(\arabic*)]
@@ -46,8 +44,6 @@
         注意到\(\frac{\delta \tilde{S}}{\delta f} = \frac{\delta S}{\delta f}\). 
     \end{enumerate}
 \end{solution}
-% updated by: AmillyW
-% date: 2024/10/22
 
 \problem{给定两个函数\(n(t)\)和\(a(t)\)的泛函\(S[n,a] = \int_{t_1}^{t_2} \dd t\,na^3\left(A(n) + 3 B(n) \frac{a'^2}{n^2 a^2}\right)\), 其中\(A, B\)是\(n(t)\)的任意函数. 求泛函\(S[n,a]\)取极值时, \(n(t)\)和\(a(t)\)的欧拉-拉格朗日方程.}
 \begin{solution}
@@ -65,8 +61,6 @@
         \end{aligned}
     \]
 \end{solution}
-% updated by: AmillyW
-% date: 2024/10/22
 
 \problem{给定二元函数\(f(t,x)\)的泛函\(S[f]=\iint \dd t \dd x \frac12 \left[
     \left(\frac{\pp f(t,x)}{\pp t}\right)^2 - \left(\frac{\pp f(t,x)}{\pp x}\right)^2 -m^2f^2(t,x)
@@ -86,8 +80,6 @@
     \]
     取极值有\(-\frac{\delta S}{\delta f}=0\), 即\(f_{tt} - f_{xx} + -m^2f = 0\)
 \end{solution}
-% updated by: Phiyu
-% date: 2024/10/25
 
 \problem{考虑一条不可拉伸、质量均匀的柔软细绳, 长为\(l\), 质量为\(m\). 细绳两端点悬挂于相同高度, 水平距离为\(a\)(\(a<l\)). 
     \begin{enumerate}[label=(\arabic*)]
@@ -119,8 +111,6 @@
         将最后一式化简得到：\( yy'' - y'^2 - 1 = 0 \) , 此即著名的悬链线满足的微分方程. 
     \end{enumerate}
 \end{solution}
-% updated by: Moyufishy
-% date: 2024/10/26
 
 \problem{考虑3维欧氏空间中的任意2维曲面, 取直角坐标, 曲面方程为\( z=z(x,y) \). 曲面上任意两
     固定点, 由曲面上的任一曲线连接. 曲线方程为\( x=x(\lambda) \), \( y=y(\lambda) \), 这里的
@@ -157,8 +147,6 @@
         \end{enumerate}
     \end{enumerate}
 \end{solution}
-% updated by: Moyufishy
-% date: 2024/10/26
 
 \problem{假设地球质量均匀分布, 密度为\( \rho \), 半径为\(R\). 如图1.9所示, 在地球内部钻一个光滑隧道, 隧道处于过球心的大圆平面内. 一个物体从\(A\)点静止滑入, 则最终将由\(B\)点滑出. 在轨道平面取极坐标\( \{r,\phi\} \), 求轨道形状\( r(\phi) \)满足什么方程时物体穿过隧道的时间最短. （提示：地球内部距离中心\(r\)处质量为\(m\)的粒子的牛顿引力势能为\( U(r)=\frac23 \pi Gm\rho r^2 \), 其中\(G\)为牛顿引力常数. ） }
 \begin{solution}
@@ -185,11 +173,9 @@
     \]
     最后一式整理可得\( r(R^2-r^2)r''+(r^2-2R^2)r'^2-R^2r^2 = 0 \)
 \end{solution}
-% updated by: Moyufishy
-% date: 2024/10/26
 
 \problem{数学上将面积取极值的曲面称作极小曲面. 如图1.10所示, \( \{x,y\} \)-平面上给定的\(A\)点和\(B\)点之间有曲线\( y(x) \), 此曲线绕\(x\)轴旋转而成旋转曲面. 
-    \begin{enumerate}
+    \begin{enumerate}[label=(\arabic*)]
         \item 求此旋转曲面面积取极小值时\( y(x) \)满足的微分方程; 
         \item 求\( y(x) \)的解. 
     \end{enumerate}
@@ -197,18 +183,51 @@
 \begin{solution}
     待施工
 \end{solution}
-% updated by: Moyufishy
-% date: 2024/10/26
 
 \problem{并不是所有的微分方程都是欧拉-拉格朗日方程. 
-    \begin{enumerate}
+    \begin{enumerate}[label=(\arabic*)]
         \item 证明\( f''(t)+2\lambda f'(t)+\omega^2f(t) = 0 \)（\( \lambda,\omega \)是常数）在\( \lambda \neq 0 \)时不是欧拉-拉格朗日方程; 
         \item 引入新变量\( q = \me^{\lambda t}f \), 求\(q\)所满足的方程; 
         \item 求\(q\)的方程作为欧拉-拉格朗日方程所对应的泛函\( \tilde{S}[q] \). 
     \end{enumerate}
 }
 \begin{solution}
-    待施工
+    \begin{enumerate}[label=(\arabic*)]
+        \item 假设存在泛函\(S[f]=\int L(t,f,f') \dd t\)满足:
+        \[
+        \frac{\delta S}{\delta f}=L_f-\frac{\dd}{\dd t}(L_{f'})=f''+2\lambda f'+\omega^2 f
+        \]
+        将此式化简可得到:
+        \[
+        L_f-L_{f't}-L_{ff'}f'-L_{f'f'}f''=f''+2\lambda f'+\omega^2 f
+        \]
+        于是应当有\(L_{f'f'}=-1\),进而有:
+        \[
+        L(t,f,f')=-\frac12f'^2+C_1(f,t)f'+C_2(f,t)
+        \]
+        其中\(C_1(f,t),C_2(f,t)\)的具体形式待定,将该解带入欧拉-拉格朗日方程化简有:
+        \[
+        \frac{\pp C_2}{\pp f}(f,t)-\frac{\pp C_1}{\pp t}(f,t)=2\lambda f'+\omega^2f
+        \]
+        在\(\lambda\neq 0\)的情况下,上式不可能对所有\(f\)恒成立,因此原微分方程不是欧拉-拉格朗日方程.
+        \item 将\(f(t)=\me ^{-\lambda t}q(t)\)带入原方程,容易化简得到:\[
+        q''(t)+(\omega^2 - \lambda^2)q(t)=0
+        \]
+        \item 与(1)中讨论类似,将所用符号对应替换即可:\((S,L,f;\lambda,\omega^2)\rightarrow(\tilde{S},\tilde{L},q;0,\omega^2-\lambda^2)\),替换后得到：
+        \[
+        \begin{cases}
+            \tilde{L}(t,q,q')=-\frac12q'^2+C_1(q,t)q'+C_2(q,t)\\
+            \\
+            \frac{\pp C_2}{\pp q}(q,t)-\frac{\pp C_1}{\pp t}(q,t)=(\omega^2-\lambda^2)q
+        \end{cases}
+        \]
+        不妨取\(C_1(q,t)=0,C_2(q,t)=\frac12(\omega^2-\lambda^2)q^2\),我们就能得到:
+        \[
+        \tilde{S}[q]=\int\tilde{L}(t,q,q')\dd t=\int-\left( 
+            \frac12q'^2-\frac12(\omega^2-\lambda^2)q^2
+        \right)\dd t
+        \]
+        不难看出,新变量\(q\)的Lagrange函数满足谐振子的形式。
+    \end{enumerate}
 \end{solution}
-% updated by: Moyufishy
-% date: 2024/10/26
+
