@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.7.2)  3 NOV 2024 10:24
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.7.2)  5 NOV 2024 09:29
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1389,7 +1389,12 @@ Package fancyhdr Warning: \headheight is too small (0.0pt):
 
 ]
 第二章
-) [7] (./content/Ch3.tex
+File: content/Figures/2-2.png Graphic file (type bmp)
+<content/Figures/2-2.png>
+[7]
+File: content/Figures/2-3.png Graphic file (type bmp)
+<content/Figures/2-3.png>
+)
 
 Package fancyhdr Warning: \headheight is too small (0.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1397,11 +1402,14 @@ Package fancyhdr Warning: \headheight is too small (0.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-13.59999pt}.
 
-[8
-
-]
+[8] (./content/Ch3.tex
 第三章
-) [9] (./content/Ch4.tex
+
+Underfull \vbox (badness 2443) has occurred while \output is active []
+
+ [9
+
+])
 
 Package fancyhdr Warning: \headheight is too small (0.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1409,11 +1417,11 @@ Package fancyhdr Warning: \headheight is too small (0.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-13.59999pt}.
 
-[10
-
-]
+[10] (./content/Ch4.tex
 第四章
-) [11] (./content/Ch5.tex
+) [11
+
+] (./content/Ch5.tex
 
 Package fancyhdr Warning: \headheight is too small (0.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1582,12 +1590,12 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 390B2F434CD1D81A14921C756709CC73;1400.
  ) 
 Here is how much of TeX's memory you used:
- 83723 strings out of 475889
- 1768639 string characters out of 5779806
+ 83769 strings out of 475889
+ 1769803 string characters out of 5779806
  1934869 words of memory out of 5000000
- 104005 multiletter control sequences out of 15000+600000
+ 104047 multiletter control sequences out of 15000+600000
  620908 words of font info for 115 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 93i,13n,97p,1225b,47349s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 93i,14n,97p,1225b,47349s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on main.pdf (40 pages).
