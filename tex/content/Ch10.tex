@@ -13,7 +13,19 @@
     \item 证明任意复函数$u(t)$及其复共轭的朗斯基行列式$\mathcal{W}(u,u^\star)$只有虚部, 并讨论其非零的条件.
 \end{enumerate}}
 \begin{solution}
-    待施工
+    \begin{enumerate}[label=(\arabic*)]
+        \item 不难求得$\mathcal{W}(\me^{-\mi \omega t},\me^{+\mi \omega t})=2\mi \omega\neq 0$
+        \item 对于任意复函数$u(t)$,
+        \[
+            \mathcal{W}(u, u^\star)=\det \begin{pmatrix}
+                u & u^\star\\
+                \dot{u} & \dot{u^\star}\\ 
+            \end{pmatrix}
+            =u\dot{u^\star}-(u\dot{u^\star})^\star
+            =2\mathrm{Im}(u\dot{u^\star})    
+        \]
+        可见其只有虚部,非零要求$\mathrm{Im}(u\dot{u^\star})\neq 0$
+    \end{enumerate}
 \end{solution}
 
 \problem{某单自由度系统, 广义坐标为$q$, 拉格朗日量为$L=\dfrac{1}{2}G(t)\dot{q}^2-\dfrac{1}{2}W(t)q^2$, 其中$G(t)$和$W(t)$都是时间的函数.
@@ -25,7 +37,18 @@
     \begin{enumerate}[label=(\arabic*)]
         \item 易求得系统运动方程为
         \[
-            G(t)\ddot{q}-W(t){q}=0
+            G(t)\ddot{q}-\dot{G}(t)\dot{q}-W(t){q}=0
+        \]
+        转化为一阶常微分方程组为：
+        \[
+            \dot{\mathbf{q}}=\mathcal{A}(t)\mathbf{q}
+        \]
+        式中
+        \[
+            \mathcal{A}=\begin{pmatrix}
+                0&1\\
+                -W/G&-\dot{G}/G
+            \end{pmatrix}
         \]
         Wronskian 为
         \[
@@ -35,12 +58,12 @@
             \end{pmatrix}
             =q_1\dot{q_2}-q_2\dot{q_1}
         \]
-        现计算$\dot{\mathcal{W}}$
+        现计算$\dot{\mathcal{W}}$.由线性常微分方程的Liouville定理,
         \[
-            \dot{\mathcal{W}}=\dot{q_1}\dot{q_2}+q_1\ddot{q_2}-\dot{q_1}\dot{q_2}-q_2\ddot{q_1}=
+            \dot{\mathcal{W}}=\mathrm{tr}(\mathcal{A})\mathcal{W}
         \]
-        未完工
-        \item 
+        则$f(t)=-\mathrm{tr}(\mathcal{A})=\frac{\dot{G}(t)}{G(t)}$.
+        \item 由于$\mathcal{W}\neq 0$,$\dot{\mathcal{W}}=0$意味着$\dot{G}(t)=0$
     \end{enumerate}
 \end{solution}
 
