@@ -13,7 +13,7 @@
                 1+X+\frac12X^2+\frac16X^3+Y+\frac12Y^2+\frac16Y^3+XY+\frac12X^2Y+\frac12XY^2
             \end{align*}
             \begin{align*}
-                \ln(\me^{X}\me^{Y})&=X+Y+\frac12(X^2+Y^2+2XY)+\frac16(X^3+Y^3+3X^2Y+3XY^2+Y^3)-\\&\frac12(X+Y+\frac12(X^2+Y^2+2XY))^2+\frac13(X+Y)^3\\&=X+Y+\frac12(X^2+Y^2+2XY)+\frac16(X^3+Y^3+3X^2Y+3XY^2+Y^3)-\\&\frac12\Big(X^2+Y^2+XY+YX+\frac12((X+Y)(X^2+Y^2+2XY)+(X^2+Y^2+2XY)(X+Y))\Big)\\&+\frac13(X^3+Y^2X+XYX+YX^2+X^2Y+Y^3+XY^2+YXY)\\&=X+Y+\frac12(XY-YX)-\frac14(2X^3+2Y^3+2YXY+2XYX+3X^2Y+3XY^2+Y^2X+YX^2)\\&+\frac16(X^3+3X^2Y+3XY^2+Y^3)+\frac13(X^3+Y^2X+XYX+YX^2+X^2Y+Y^3+XY^2+YXY)\\&=X+Y+\frac{1}{2}[X,Y]+\frac{1}{12}[X,[X,Y]]-\frac{1}{12}[Y,[X,Y]]
+                \ln(\me^{X}\me^{Y})&=X+Y+\frac12(X^2+Y^2+2XY)+\frac16(X^3+Y^3+3X^2Y+3XY^2+Y^3)-\\&\frac12(X+Y+\frac12(X^2+Y^2+2XY))^2+\frac13(X+Y)^3\\&=X+Y+\frac12(X^2+Y^2+2XY)+\frac16(X^3+Y^3+3X^2Y+3XY^2+Y^3)-\\&\frac12\left(X^2+Y^2+XY+YX+\frac12\left((X+Y)(X^2+Y^2+2XY)+(X^2+Y^2+2XY)(X+Y)\right)\right)\\&+\frac13(X^3+Y^2X+XYX+YX^2+X^2Y+Y^3+XY^2+YXY)\\&=X+Y+\frac12(XY-YX)-\frac14(2X^3+2Y^3+2YXY+2XYX+3X^2Y+3XY^2+Y^2X+YX^2)\\&+\frac16(X^3+3X^2Y+3XY^2+Y^3)+\frac13(X^3+Y^2X+XYX+YX^2+X^2Y+Y^3+XY^2+YXY)\\&=X+Y+\frac{1}{2}[X,Y]+\frac{1}{12}[X,[X,Y]]-\frac{1}{12}[Y,[X,Y]]
             \end{align*}
         \item 要求是展开到2阶, 那么只需要取前两项. 
         根据SO(3)生成元之间的对易关系$[J_i,J_j]=\varepsilon_{ijk}J_k$
@@ -104,12 +104,12 @@
     熟知相对于O点角动量等于两项之和
     $$\vec{L}=\frac13m\omega l^2\,\h{e}_3-\frac14m\omega hl\,\h{e}_1$$
     当然可以直接计算其相对于O点的惯量张量. 
-    $$I_{11}=\frac13mh^2,I_{22}=\frac13m(h^2+l^2),I_33=\frac13mh^2$$
+    $$I_{11}=\frac13mh^2,I_{22}=\frac13m(h^2+l^2),I_{33}=\frac13mh^2$$
     以及
-    $$I_{13}=I_{31}=-\int\rho xz\dd x\,\dd z=-\frac14mhl$$
+    $$I_{13}=I_{31}=-\int\rho xz\,\dd x\,\dd z=-\frac14mhl$$
     再利用角动量公式$\vec{L}=\vec{I}\vec{\omega}$得到一样的结果. 
     由熟知公式
-    $$\Big(\frac{\dd}{\dd t}\Big)_{\text{space}}=\Big(\frac{\dd}{\dd t}\Big)_{\text{body}}+\vec{\omega}\times$$
+    $$\left(\frac{\dd}{\dd t}\right)_{\mathrm{space}}=\left(\frac{\dd}{\dd t}\right)_{\mathrm{body}}+\vec{\omega}\times$$
     得到力矩
     $$\vec{M}=\vec{\omega}\times\vec{L}=\frac14mhl\omega^2$$
 \end{solution}
