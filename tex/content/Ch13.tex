@@ -1,1 +1,501 @@
 \chapter{哈密顿正则方程}
+\problem{求二元函数$L=ax^2+2bxy+cy^2+dx+ey$的对$x,y$的勒让德变换.}
+\begin{solution}
+    \begin{align*}
+        H&=\sum\frac{\partial L}{\partial x_i}x_i-L\\&=ax^2+2bxy+cy^2
+    \end{align*}
+\end{solution}
+\problem{考虑函数$L=\frac12(q^1v^2-q^2v^1)-V(q^1,q^2)$,其中$\{q^1,q^2\}$为被动变量,$\{v^1,v^2\}$为主动变量，$V$是任意函数.
+\begin{enumerate}[label=(\arabic*)]
+\item 分析$L$对$\{v^1,v^2\}$的黑塞矩阵，判断其是奇异还是正规系统；\item 定义新变量$p_1=\frac{\partial L}{\partial v^1},p_2\frac{\partial L}{\partial v^2}$,求$\{q^1,q^2,p^1,p^2\}$之间的约束关系.
+\end{enumerate}}
+\begin{solution}
+\begin{enumerate}[label=(\arabic*)]
+    \item 黑塞矩阵为
+    $$\Big(\frac{\partial^2 L}{\partial v^{i}\partial v^{j}}\Big)=\begin{pmatrix}
+        0&0\\0&0
+    \end{pmatrix}$$
+    显然为奇异系统。
+
+    \item $$p_1=\frac12q^1,p_2=-\frac12q^2$$
+    这就是约束关系。
+\end{enumerate}
+\end{solution}
+\problem{考虑例4.4中的双摆,求系统的哈密顿量和哈密顿正则方程.}
+\begin{solution}
+    由正文得到
+    $$L=\frac{1}{2}(m_1+m_2)l_1^2\dot \theta_1^2+\frac12m_2l_2^2\dot \theta_2^2+m_2l_1l_2\dot \theta_1\dot \theta_2\cos(\theta_1-\theta_2)+m_1gl_1\cos\theta_1+m_2g(l_1\cos\theta_1+l_2\cos\theta_2)$$
+    由广义动量的定义
+    \begin{align*}
+        p_1&=\frac{\partial L}{\partial \dot\theta_1}=(m_1+m_2)l_1^2\dot\theta_1+m_2l_1l_2\dot\theta_2\cos(\theta_1-\theta_2)\\
+        p_2&=\frac{\partial L}{\partial \dot\theta_2}=m_2l_2^2\dot\theta_2++m_2l_1l_2\dot\theta_1\cos(\theta_1-\theta_2)
+    \end{align*}
+    解得
+    \begin{align*}
+        \dot\theta_1&=\frac{p_1-\frac{l_1}{l_2}p_2}{m_1l_1^2+m_2l_1^2(1-\cos^2(\theta_1-\theta_2))}\\
+        \dot\theta_2&=\frac{\frac{(m_1+m_2)l_1}{m_2l_2}p_2-\cos(\theta_1-\theta_2)p_1}{m_1l_1+m_2l_1(1-\cos^2(\theta_1-\theta_2))}
+    \end{align*}
+    代入哈密顿量表达式得到
+    \begin{align*}
+        H&=\sum_{i}p_{i}\dot\theta_i-L\\
+         &=\frac{1}{2}(m_1+m_2)l_1^2\dot \theta_1^2+\frac12m_2l_2^2\dot \theta_2^2+m_2l_1l_2\dot \theta_1\dot \theta_2\cos(\theta_1-\theta_2)-m_1gl_1\cos\theta_1-m_2g(l_1\cos\theta_1+l_2\cos\theta_2)\\
+         &=\frac12p_1\dot\theta_1+\frac12p_2\dot\theta_2-m_1gl_1\cos\theta_1-m_2g(l_1\cos\theta_1+l_2\cos\theta_2)\\
+         &=\frac{p_1^2-(\frac{l_1}{l_2}+\cos(\theta_1-\theta_2))p_1p_2+(1+\frac{m_1}{m_2})\frac{l_1}{l_2}p_2^2}{2l_1^2(m_1+m_2\sin^2(\theta_1-\theta_2))}-m_1gl_1\cos\theta_1-m_2g(l_1\cos\theta_1+l_2\cos\theta_2)
+    \end{align*}
+    正则方程
+    \begin{align*}
+        \dot\theta_1&=\frac{p_1-(\frac{l_1}{l_2}+\cos(\theta_1-\theta_2))p_2}{l_1^2(m_1+m_2\sin^2(\theta_1-\theta_2))}\\
+        \dot\theta_2&=\frac{-(\frac{l_1}{l_2}+\cos(\theta_1-\theta_2))p_1+(1+\frac{m_1}{m_2})\frac{l_1}{l_2}p_2}{l_1^2(m_1+m_2\sin^2(\theta_1-\theta_2))}\\
+        \dot p_1&=-\frac{2p_1p_2\sin(\theta_1-\theta_2)l_1^2(m_1+m_2\sin^2(\theta_1-\theta_2))}{4l_1^4(m_1+m_2\sin^2(\theta_1-\theta_2))^4}\\
+        &-\frac{2m_2\sin(\theta_1-\theta_2)\cos(\theta_1-\theta_2)(p_1^2-(\frac{l_1}{l_2}+\cos(\theta_1-\theta_2))p_1p_2+(1+\frac{m_1}{m_2})\frac{l_1}{l_2}p_2^2)}{4l_1^4(m_1+m_2\sin^2(\theta_1-\theta_2))^4}\\
+        &-(m_1+m_2)gl_1\sin\theta_1\\
+        \dot p_2&=-\frac{2p_1p_2\sin(\theta_1-\theta_2)l_1^2(m_1+m_2\sin^2(\theta_1-\theta_2))}{4l_1^4(m_1+m_2\sin^2(\theta_1-\theta_2))^4}\\
+        &-\frac{2m_2\sin(\theta_1-\theta_2)\cos(\theta_1-\theta_2)(p_1^2-(\frac{l_1}{l_2}+\cos(\theta_1-\theta_2))p_1p_2+(1+\frac{m_1}{m_2})\frac{l_1}{l_2}p_2^2)}{4l_1^4(m_1+m_2\sin^2(\theta_1-\theta_2))^4}\\
+        &-m_2gl_2\sin\theta_2
+    \end{align*}
+\end{solution}
+\problem{考虑例4.5中的顶端自由滑动的单摆,求系统的哈密顿量和哈密顿正则方程.}
+\begin{solution}
+    解得
+    \begin{align*}
+        p_x&=m\dot x+ml\dot\theta\cos\theta\\
+        p_\theta&=ml^2\dot \theta+m\dot xl\cos\theta
+    \end{align*}
+    反解得到
+    \begin{align*}
+        \dot x&=\frac{lp_x-p_\theta\cos\theta}{ml\sin^2\theta}\\
+        \dot \theta&=\frac{p_\theta-p_xl\cos\theta}{ml^2}
+    \end{align*}
+    \begin{align*}
+        H&=\sum p_iq^i-L\\
+         &=\frac12\Big(\dot x(\dot x+l\dot\theta\cos\theta)+l\dot\theta(l\dot\theta+\dot x\cos\theta)\Big)-mgl\cos\theta\\
+         &=\frac12p_x\dot x+\frac12p_\theta\dot\theta-mgl\cos\theta\\
+         &=\frac12p_x\frac{lp_x-p_\theta\cos\theta}{ml\sin^2\theta}+\frac12p_\theta\frac{p_\theta-p_xl\cos\theta}{ml^2}-mgl\cos\theta\\
+         &=\frac{p_x^2}{2m\sin^2(\theta)}-\frac{p_xp_\theta}{2ml}\cos\theta(\frac{1}{\sin^2\theta}+1)+\frac{p_\theta^2}{2ml^2}
+    \end{align*}
+    哈密顿正则方程
+    \begin{align*}
+        \dot x&=\frac{p_x}{m\sin^2\theta}-\frac{p_\theta}{2ml}\cos\theta(\frac{1}{\sin^2\theta}+1)\\
+        \dot\theta&=-\frac{p_\theta}{2ml}\cos\theta(\frac{1}{\sin^2\theta}+1)+\frac{p_\theta}{ml^2}\\
+        \dot p_x&=0\\
+        \dot p_\theta&=\frac{p_x^2}{m\sin^3\theta}\cos\theta-\frac{p_xp_\theta}{2ml}\sin\theta-\frac{p_xp_\theta\cos^2\theta}{\sin^3\theta}
+    \end{align*}
+\end{solution}
+\problem{已知系统的广义坐标为$L=a\dot x^2+b\frac{\dot y^2}{x}+c\dot x\dot y+fy^2\dot x\dot z+g\dot y^2-k\sqrt{x^2+y^2}$,其中$a,b,c,d,f,g,k$都是常数.}
+\begin{enumerate}[label=(\arabic*)]
+\item 求系统的哈密顿量和哈密顿正则方程.
+
+\item 求系统的运动常数.
+\end{enumerate}
+\begin{solution}
+    \begin{enumerate}[label=(\arabic*)]
+    \item 系统广义动量
+    \begin{align*}
+        p_x&=2a\dot x+c\dot y+fy^2\dot z\\
+        p_y&=\frac{2b\dot y}{x}+c\dot x+2g\dot y\\
+        p_z&=fy^2\dot x
+    \end{align*}
+    反解得到
+    \begin{align*}
+        \dot x&=\frac{p_z}{fy^2}\\
+        \dot y&=\frac{p_y-\frac{cp_z}{fy^2}}{\frac{2b}{x}+2g}\\
+        \dot z&=\frac{(p_x-\frac{2ap_z}{fy^2})(\frac{2b}{x}+2g)-cp_y+\frac{c^2p_z}{fy^2}}{fy^2(\frac{2b}{x}+2g)}
+    \end{align*}
+    哈密顿量
+    \begin{align*}
+        H&=\sum_{i}p_i\dot x^i-L\\&=2a\dot x^2+c\dot y\dot x+fy^2\dot z\dot x+\frac{2b\dot y^2}{x}+c\dot x\dot y+2g\dot y^2+fy^2\dot x\dot z\\&-(a\dot x^2+b\frac{\dot y^2}{x}+c\dot x\dot y+fy^2\dot x\dot z+g\dot y^2-k\sqrt{x^2+y^2})\\&=a\dot x^2+c\dot x\dot y+fy^2\dot x\dot z+g\dot y^2+\frac{b\dot y^2}{x}+k\sqrt{x^2+y^2}\\&=a\frac{p_z^2}{f^2y^4}+c\frac{p_z}{fy^2}\frac{p_y-\frac{cp_z}{fy^2}}{\frac{2b}{x}+2g}+p_z\frac{(p_x-\frac{2ap_z}{fy^2})(\frac{2b}{x}+2g)-cp_y+\frac{c^2p_z}{fy^2}}{fy^2(\frac{2b}{x}+2g)}\\&+g\frac{(p_y-\frac{cp_z}{fy^2})^2}{2(\frac{2b}{x}+2g)}+k\sqrt{x^2+y^2}\\&=-a\frac{p_z^2}{f^2y^4}+\frac{p_xp_z}{fy^2}+g\frac{(p_y-\frac{cp_z}{fy^2})^2}{2(\frac{2b}{x}+2g)}+k\sqrt{x^2+y^2}
+    \end{align*}
+    由哈密顿正则方程
+    \begin{align*}
+        \dot x&=\frac{\partial H}{\partial p_x}=\frac{p_z}{fy^2}\\
+        \dot y&=\frac{\partial H}{\partial p_y}=\frac{g(p_y-\frac{cp_z}{fy^2})}{\frac{2b}{x}+2g}\\
+        \dot z&=\frac{\partial H}{\partial p_z}=-\frac{2ap_z}{f^2y^4}+\frac{p_x}{fy^2}+\frac{gc(p_y-\frac{cp_z}{fy^2})}{(\frac{2b}{x}+2g)fy^2}\\
+        \dot p_x&=-\frac{\partial H}{\partial x}=--\frac{b(p_y-\frac{cp_z}{fy^2})^2}{4(b+gx)^2}-\frac{kx}{\sqrt{x^2+y^2}}\\
+        \dot p_y&=-\frac{\partial H}{\partial y}=-\frac{4p_z^2}{f^2y^5}(4a-\frac{gc^2}{4(\frac bx+g)})-\frac{2p_z}{fy^3}(p_x-\frac{gcp_y}{2(\frac{b}{x}+g)})\\
+        \dot p_z&=0
+    \end{align*}
+    \item 可以知道$p_z,H$是守恒量。
+    \end{enumerate}
+\end{solution}
+\problem{某单自由度系统的运动方程为$\dot q=q^2+qp,\dot p=p^2-qp$，利用(13.29)判断其是否为哈密顿系统.}
+\begin{solution}
+    由正文得到
+    \begin{align*}
+        u&=q^2+qp\\
+        v&=p^2-qp\\
+    \end{align*}
+    计算得到
+    \begin{align*}
+        &\frac{\partial u}{\partial q}=2q+p,\frac{\partial u}{\partial p}=q\\
+        &\frac{\partial v}{\partial q}=-p,\frac{\partial v}{\partial p}=2p-q\\
+    \end{align*}
+    明显不满足$\frac{\partial u}{\partial q}=-\frac{\partial v}{\partial p}$,不是哈密顿系统.
+\end{solution}
+\problem{某单自由度系统运动方程为$\dot q=p$和$\dot p=-\omega^2 q-2\lambda p$,其中$\omega$和$\lambda$都是常数;
+\begin{enumerate}[label=(\arabic*)]
+    \item 利用(13.29)判断其是否为哈密顿系统;
+    \item 引入新变量$Q=q$和$P=p\me^{2\lambda t}$,求$Q$和$P$的运动方程,判断其是否为哈密顿系统并求哈密顿量.
+\end{enumerate}}
+\begin{solution}
+    \begin{enumerate}[label=(\arabic*)]
+        \item \begin{align*}
+            &\frac{\partial u}{\partial q}=0\\
+            &\frac{\partial v}{\partial p}=-2\\
+              \end{align*}
+        显然不是
+        \item 由题设易知道$\dot p+2\lambda p=\dot P \me^{-2\lambda t}$
+        于是其运动方程写为
+        \begin{align*}
+            \dot Q&=P\me^{-2\lambda t}\\
+            \dot P&=-\omega^2 Q\me^{2\lambda t}
+        \end{align*}
+        此时$\frac{\partial u}{\partial Q}=\frac{\partial v}{\partial P}=0$满足哈密顿系统的微分条件
+
+        由哈密顿方程得到
+        \begin{align*}
+            \frac{\partial H}{\partial P}&=P\me^{-2\lambda t}\\
+            \frac{\partial H}{\partial Q}&=\omega^2 Q\me^{2\lambda t}
+        \end{align*}
+        于是,由全微分条件得到
+        $$H=\frac12 Q^2\me^{2\lambda t}+\frac12 P^2\me^{-2\lambda t}$$
+    \end{enumerate}
+\end{solution}
+\problem{某单自由度系统的运动方程为$\dot q=aq+bp$和$\dot p=cq+dp$
+\begin{enumerate}[label=(\arabic*)]
+    \item 利用(13.29)判断$a,b,c,d$满足什么条件时,系统为哈密顿系统;
+    \item 求对应的哈密顿量.
+\end{enumerate}}
+\begin{solution}
+    \begin{enumerate}[label=(\arabic*)]
+        \item 由正文得到
+        \begin{align*}
+            &\frac{\partial u}{\partial q}=a\\
+            &\frac{\partial v}{\partial p}=d\\
+        \end{align*}
+        要求满足$a=-d$即可;
+        \item 由上一题得到
+        \begin{align*}
+            \frac{\partial H}{\partial p}&=aq+bp\\
+            \frac{\partial H}{\partial q}&=ap-cq
+        \end{align*}
+        由$H=H(q,p)$的全微分条件
+        \begin{align*}
+            dH&=\frac{\partial H}{\partial p}dp+\frac{\partial H}{\partial q}dq\\
+              &=(aq+bp)dp+(ap-cq)dq\\
+              &=-cqdq+a(qdp+pdq)+apdp\\
+              &=-cqdq+ad(pq)+apdp
+        \end{align*}
+        积分即得到
+        $$H=-\frac12 cq^2+apq+\frac12 p^2$$
+    \end{enumerate}
+\end{solution}
+\problem{考虑与标量场相互作用的相对论性粒子的拉格朗日量式(4.40),其中$\Phi(t,\textbf{x})=\frac{V(t,\textbf{x})}{mc^2}$.
+\begin{enumerate}[label=(\arabic*)]
+    \item 求粒子的哈密顿量和正则方程;
+    \item 求非相对论极限下哈密顿量的领头阶近似.
+\end{enumerate}}
+\begin{solution}
+由于我的习惯,本题采用约定
+$$(\eta_{\mu\nu})=
+    \begin{pmatrix}
+    1&0&0&0\\
+    0&-1&0&0\\
+    0&0&-1&0\\
+    0&0&0&-1
+    \end{pmatrix}$$
+    \begin{enumerate}[label=(\arabic*)]
+    \item 我们考虑三维形式的拉格朗日量和哈密顿量,由相对论性点粒子与标量场耦合的作用量
+    $$S=-\int mc\me^{\Phi}ds=-\int mc\me^{\Phi}\frac{ds}{dt}dt=$$
+    并且考虑到$ds^2=dt^2-dx^2-dy^2-dz^2=dt^2(1-\frac{v^2}{c^2})$
+    得到三维拉格朗日量$$L=-mc^2\sqrt{1-\frac{v^2}{c^2}}\me^{\Phi}$$
+    以及广义动量
+    $$\textbf{p}=\frac{\partial L}{\partial \textbf{v}}=\frac{m\textbf{v}\me^{\Phi}}{\sqrt{1-\frac{v^2}{c^2}}}$$
+    反解得到
+    $$\textbf{v}=\frac{\textbf{pc}}{\sqrt{m^2c^2\me^{2\Phi}+p^2}}$$
+    最后得到哈密顿量
+    $$H=\textbf{p}\cdot{\textbf{v}}-L=\sqrt{p^2c^2+m^2c^4\me^{2\Phi}}$$
+    而前面已经得到了一个正则方程
+    $$\textbf{v}=\frac{\textbf{pc}}{\sqrt{m^2c^2\me^{2\Phi}+p^2}}$$
+    因此我们只需要考虑$\frac{d\textbf{p}}{dt}=-\frac{\partial H}{\partial \textbf{x}}$
+    经过计算得到
+    $$\frac{d\textbf{p}}{dt}=-\frac{m^2c^4\me^{2\Phi}}{\sqrt{p^2c^2+m^2c^4\me^{2\Phi}}}\nabla\Phi$$
+    \item 
+    \begin{align*}
+        H&=mc^2\me^{\Phi}\sqrt{\frac{p^2}{m^2c^2\me{2\Phi}}+1}\\
+         &=mc^2\me^{\Phi}(1+\frac{p^2}{2m^2c^2\me{2\Phi}})\\
+         &=mc^2(1+\frac{V}{mc^2})(1+\frac{p^2}{2m^2c^2\me^{2\Phi}})\\
+         &=mc^2+\frac12mv^2+V
+    \end{align*}
+    \end{enumerate}
+\end{solution}
+\problem{考虑电磁场中相对论性带电粒子的拉格朗日量式(4.50).
+\begin{enumerate}[label=(\arabic*)]
+    \item 求粒子的哈密顿量和哈密顿正则方程;
+    \item 由哈密顿正则方程得到等价的关于$\textbf{x}$的二阶微分方程;
+    \item 求非相对论极限下哈密顿量的领头阶近似.
+\end{enumerate}
+}
+\begin{solution}
+    \begin{enumerate}[label=(\arabic*)]
+    先考虑正文中提及的三维形式
+        \item $$L=-mc^2\sqrt{1-\frac{v^2}{c^2}}-q\varphi+q\textbf{v}\cdot\textbf{A}$$
+    其广义动量写为
+    $$\textbf{p}=\frac{\partial L}{\partial \textbf{v}}=\frac{m\textbf{v}}{\sqrt{1-\frac{v^2}{c^2}}}+q\textbf{A}$$
+    反解得到
+    $$\textbf{v}=\frac{\textbf{p}-q\textbf{A}}{\sqrt{m^2+\frac{(\textbf{p}-q\textbf{A})^2}{c^2}}}$$
+    其哈密顿量
+    \begin{align*}
+    H&=\textbf{v}\cdot\textbf{p}-L\\
+     &=\frac{mv^2}{\sqrt{1-\frac{v^2}{c^2}}}+q\textbf{A}\cdot\textbf{v}-(-mc^2\sqrt{1-\frac{v^2}{c^2}}-q\varphi+q\textbf{v}\cdot\textbf{A})\\
+     &=\frac{mc^2}{sqrt{1-\frac{v^2}{c^2}}}+q\varphi\\
+     &=\sqrt{m^2c^4+(\textbf{p}-q\textbf{A})^2c^2}+q\varphi
+    \end{align*}
+    其中一个正则方程就是
+    $$\frac{d\textbf{x}}{dt}=\frac{\textbf{p}-q\textbf{A}}{\sqrt{m^2+\frac{(\textbf{p}-q\textbf{A})^2}{c^2}}}$$
+    而另一个是
+    $$\frac{d\textbf{p}}{dt}=-\frac{\partial H}{\partial \textbf{x}}=-\frac{c\nabla (\textbf{p}-q\textbf{A})^2}{2\sqrt{m^2c^2+(\textbf{p}-q\textbf{A})^2}}-q\nabla\varphi$$
+    我们来处理分母上的式子
+    
+    由矢量分析公式
+    $$\nabla(\textbf{A}\cdot\textbf{B})=(\textbf{B}\cdot)\textbf{A}+(\textbf{A}\cdot \nabla)\textbf{B}+\textbf{B}\times(\nabla\times\textbf{A})+\textbf{A}\times(\nabla\times\textbf{B})$$
+    得到
+    $$\nabla (\textbf{p}-q\textbf{A})^2=2((\textbf{p}-q\textbf{A})\cdot\nabla)(-q\textbf{A})+2(\textbf{p}-q\textbf{A})\times(\nabla\times(-q\textbf{A}))$$
+    我们得到第二个哈密顿方程
+    $$\frac{d\textbf{p}}{dt}=+\frac{((\textbf{p}-q\textbf{A})\cdot\nabla)(q\textbf{A})+(\textbf{p}-q\textbf{A})\times(\nabla\times(q\textbf{A}))}{\sqrt{m^2c^2+(\textbf{p}-q\textbf{A})^2}}-q\nabla\varphi$$
+    利用磁感应强度和磁势的关系$\textbf{B}=\nabla\times\textbf{A}$以及第一个哈密顿方程,我们可以将上式写成更具有启发性的形式
+    $$\frac{d\textbf{p}}{dt}=-q\nabla\varphi+q\textbf{v}\times\textbf{B}+q(\textbf{v}\cdot\nabla)\textbf{A}$$
+    同时,注意到
+    $$\frac{d\textbf{A}}{dt}=\frac{\partial \textbf{A}}{\partial t}+\textbf{v}\cdot\nabla\textbf{A}$$
+    以及
+    $$\textbf{E}=-\nabla \varphi-\frac{\partial \textbf{A}}{\partial t}$$
+    上式改写为
+    $$\frac{d(\textbf{p}-q\textbf{A})}{dt}=q\textbf{E}+q\textbf{v}\times\textbf{B}$$
+    和我们在非相对论中所得到的形式十分相似.
+
+    \item 注意到可以从第一个哈密顿方程解得到
+    $$\textbf{p}-q\textbf{A}=\frac{m\textbf{v}}{\sqrt{1-\frac{v^2}{c^2}}}$$
+    就是机械动量,我们立刻得到关于$\textbf{x}$的二阶微分方程
+    $$\frac{d}{dt}\frac{m\textbf{v}}{\sqrt{1-\frac{v^2}{c^2}}}=q\textbf{E}+q\textbf{v}\times\textbf{B}$$
+    \item 
+    \begin{align*}
+        H&=mc^2\sqrt{1+\frac{(\textbf{p}-q\textbf{A})^2}{m^2c^2}}+q\varphi\\
+         &=mc^2(1+\frac{(\textbf{p}-q\textbf{A})^2}{2m^2c^2})+q\varphi\\
+         &=mc^2+\frac{(\textbf{p}-q\textbf{A})^2}{2m}+q\varphi
+    \end{align*}
+    \end{enumerate}
+    实际上我们可以直接从四维形式出发,我们知道相对论性点粒子的作用量写为(由于我的度规约定这里从后面都和非相对论情况差一个符号，但是这不要紧)
+    $$S=\int mc ds=\int mc\sqrt{u_\mu u^\mu}d\tau$$
+    其中$u^{\mu}$是四维速度.这种形式的作用量在得到哈密顿量是遇到困难,对其变分容易知道其具有等价的形式
+    $$S=\int \frac12mu_\mu u^\mu d\tau$$
+    加入电磁场后只是在作用量中简单加入一项
+    $$S_{int}=\int qu_\mu A^\mu d\tau$$
+    因此可以从作用量$S=\int \mathcal{L}d\tau$得到拉格朗日量
+    $$\mathcal{L}=\frac12mu_\mu u^\mu+qu_\mu A^\mu$$
+    而对应的广义动量
+    \begin{align*}
+        p_\mu&=\frac{\partial \mathcal{L}}{\partial u^\mu}\\
+             &=\frac{\partial }{\partial u^{\mu}}(\frac12mu_\nu u^\nu+qu_\nu A^\nu)\\
+             &=mu_\mu+qA_\mu
+    \end{align*}
+    于是得到
+    $$u_\mu=\frac{p_\mu-qA_{\mu}}{m}$$
+    于是对应的哈密顿量
+    \begin{align*}
+        \mathcal{H}&=p_\mu u^\mu-\mathcal{L}\\
+                   &=(mu_\mu+qA_\mu)u^\mu-(\frac12mu_\mu u^\mu+qu_\mu A^\mu)\\
+                   &=\frac12mu_\mu u^\mu\\
+                   &=\frac{(p_\mu-qA_{\mu})(p^\mu-qA^{\mu})}{2m}
+    \end{align*}
+    对应的正则方程是
+    $$\frac{dx_\mu}{d\tau}=u_\mu=\frac{p_\mu-qA_{\mu}}{m}$$
+    和
+    $$\frac{dp_\nu}{d\tau}=q\frac{(p_\mu-qA_{\mu})}{m}\frac{\partial A^\mu}{\partial x^\nu}$$
+    注意到
+    $$\frac{dA^{\mu}}{d\tau}=\frac{\partial A^\mu}{\partial x_{\nu}}u_\nu$$
+    上式也可写为熟知的形式
+    $$ m\frac{du_\mu}{d\tau}=eF_{\mu \nu}u^\nu$$
+\end{solution}
+\problem{某单自由度系统的哈密顿量为$H=\frac{p^2}{2m}+\textbf{A}\cdot p+V(\textbf{x})$,其中$\textbf{x}$为坐标,$\textbf{p}$为共轭动量,$\textbf{A}$为外矢量场.
+\begin{enumerate}[label=(\arabic*)]
+    \item 求该系统的拉格朗日量;
+    \item 求系统的哈密顿正则方程
+    \item 若$\textbf{A}(\textbf{x})=\textbf{a}$为常矢量,$V(\textbf{x})=-\textbf{f}\cdot\textbf{x}$且$\textbf{f}$也为常矢量,求哈密顿正则方程在初始条件$\textbf{x}(0)=0,\textbf{p}(0)=0$下的解
+\end{enumerate}}
+\begin{solution}
+    \begin{enumerate}[label=(\arabic*)]
+        \item 由哈密顿正则方程
+        $$\frac{d{\textbf{x}}}{dt}=\frac{\partial H}{\partial \textbf{p}}=\frac{\textbf{p}}{m}+\textbf{A}$$
+        因此拉格朗日量
+        $$L=\frac{d\textbf{x}}{dt}\cdot\textbf{p}-H=\frac12m(\frac{d\textbf{x}}{dt}-\textbf{A})^2-V(\textbf{x})$$
+        \item 已经得到
+        $$\frac{d{\textbf{x}}}{dt}=\frac{\partial H}{\partial \textbf{p}}=\frac{\textbf{p}}{m}+\textbf{A}$$
+        另一个哈密顿正则方程为
+        $$\frac{d\textbf{p}}{dt}=-\nabla V-\textbf{p}\cdot\nabla\textbf{A}$$
+        \item 由第一个哈密顿方程对时间求导得到
+        $$\frac{d^2\textbf{x}}{{dt^2}}=\frac{d\textbf{p}}{mdt}=\frac{\textbf{f}}{m}$$
+        由初始条件$\textbf{p}(0)=0=m(\frac{d\textbf{x}}{dt}(0)-\textbf{A})$解得
+        $$\textbf{x}=\textbf{a}t+\textbf{f}\frac{t^2}{2m}$$
+    \end{enumerate}
+\end{solution}
+\problem{某单自由度拉格朗日量系统为
+$$L=\frac12\cos^2(\omega t)\dot q^2-\frac12 \omega\sin(2\omega t)q\dot q-\frac12\omega^2\cos(2\omega t)q^2$$
+\begin{enumerate}[label=(\arabic*)]
+    \item 求该系统的哈密顿量和哈密顿正则方程;
+    \item 哈密顿量$H$是否为运动常数?
+    \item 引入新的变量$\tilde{q}=\cos(\omega t)q$,求用新变量表达的拉格朗日量,记为$\bar{L}$
+    \item 求$\bar{L}$对应的哈密顿量$\bar{H}$,并说明其描述什么物理系统
+    \item 证明$H$和$\bar{H}$的哈密顿正则方程等价,即可以互相导出.
+\end{enumerate}
+}
+\begin{solution}
+\begin{enumerate}[label=(\arabic*)]
+    \item $$p=\frac{\partial L}{\partial \dot{q}}=\dot q\cos(\omega t)-\frac12 \omega\sin{2\omega t}q$$
+    因此有
+    \begin{align*}
+        H&=p\dot q-L\\
+        &=\frac12\cos^2(\omega t)\dot q^2+\frac12\omega^2q^2\cos(2\omega t )\\
+        &=\frac12\cos^2(\omega t)(\frac{p}{\cos^2(\omega t)}+\omega\tan(\omega t)q)^2+\frac12\omega^2q^2\cos(2\omega t)\\
+        &=\frac12\frac{p^2}{\cos^2{\omega t}}+\omega \tan\omega t qp+\frac12\omega^2q^2\cos(2\omega t)
+    \end{align*}
+    由哈密顿正则方程
+    \begin{align*}
+        \dot q&=\frac{\partial H}{\partial p}=\frac{p}{\cos^2(\omega t)}+\omega \tan (\omega t)q\\\
+        \dot p&=-\frac{\partial H}{\partial q}=-\omega\tan(\omega t)p-\omega^2\cos^2(\omega t)q
+    \end{align*}
+    \item 不是
+    \item 
+    由题给条件反解得到$\dot{q}=\frac{\dot{\tilde{q}}+\omega \tilde q\tan(\omega t)}{\cos(\omega t)}$
+    
+    注意到在坐标变换下拉格朗日量数值不变,因此有
+    \begin{align*}
+        \bar{L}&=\frac12\cos^2(\omega t)\frac{(\dot{\tilde{q}}+\omega \tilde q\tan(\omega t))^2}{\cos^2(\omega t)}-\frac12\omega\sin(2\omega t)\frac{\tilde q}{\cos(\omega t)}\frac{\dot{\tilde{q}}+\omega \tilde q\tan(\omega t)}{\cos(\omega t)}-\frac12\omega^2q^2\cos(2\omega t)\\&=\frac12(\dot{\tilde{q}}-\omega \tilde q\tan(\omega t))^2(\tilde q\dot{\tilde{q}}+\omega\tilde{q}^2\tan(\omega t))-\frac12\omega^2q^2\cos(2\omega t)\\&=\frac12\dot{\tilde{q}}^2-\frac12\omega^2\tilde{q}\tan^2(\omega t)-\frac12\omega^2\tilde{q}^2\frac{\cos(2\omega t)}{\cos^2(\omega t)}\\&=\frac12\dot{\tilde{q}}^2-\frac12\omega^2q^2
+    \end{align*}
+    描述的物理系统:谐振子.
+    由上式,$\tilde p=\dot{\tilde q}$,用勒让德变换容易得到哈密顿量
+    $$H=\frac12 \tilde p^2+\frac12\omega^2q^2$$
+    容易得到新的哈密顿正则方程
+    \begin{align*}
+        &\dot{\tilde q}=\tilde p\\
+        &\dot{\tilde p}=-\omega^2\tilde q
+    \end{align*}
+    由于
+    $$\tilde p=\dot{\tilde q}=\dot q\cos(\omega t)-\omega\sin(\omega t)q$$
+    \item 证明两者导出同样的运动方程即可
+
+    $$\dot {\tilde p}=\ddot q\cos(\omega t)-2\omega \sin(\omega t)q-\omega^2\sin(\omega t)q$$
+    即
+    $$\ddot q\cos(\omega t)-2\omega \sin(\omega t)q-\omega^2\sin(\omega t)q+\omega^2\cos(\omega t)q=0$$
+    由原来的广义动量和广义速度之间的关系可以得到
+    $$\dot p=\ddot q\cos(\omega t)-\omega \dot q\sin(\omega t)-\omega^2\sin(2\omega t)q-\frac12\omega \sin(2\omega t)q\dot q$$
+    代入得到自洽的结果.
+\end{enumerate}
+\end{solution}
+\problem{已知某单自由度系统的哈密顿量为
+$$H=\frac{p^2}{2m}-b\me^{-\lambda t}pq+\frac{mb}{2}\me^{-\lambda t}(\lambda+b\me^{-\lambda t})q^2+\frac{k}{2}q^2$$
+\begin{enumerate}[label=(\arabic*)]
+    \item 求该系统的拉格朗日量$L$;
+    \item 利用分部积分,将$L$化为等价的不显含时间的形式,记为$\bar{L}$;
+    \item 求$\bar{L}$对应的哈密顿量$\bar{H}$,并说明其描述什么物理系统;
+    \item 证明$H$和$\bar{H}$的哈密顿正则方程等价,即可以互相导出.
+\end{enumerate}
+}
+\begin{solution}
+    \begin{enumerate}[label=(\arabic*)]
+        \item 由哈密顿正则方程,
+        $$\dot q=\frac{\partial H}{\partial p}=\frac pm-b\me^{-\lambda t}q$$
+        解得
+        $$p=m(\dot q+qb\me^{-\lambda t})$$
+        而
+        \begin{align*}
+            L&=p\dot q-H\\
+             &=(\frac pm-b\me^{-\lambda t}q)p-\frac{p^2}{2m}+b\me^{-\lambda t}pq-\frac12mb\me^{-\lambda t}(\lambda+b\me^{-\lambda t})q^2-\frac12 kq^2\\
+             &=\frac{p^2}{2m}-\frac12mb\me^{-\lambda t}(\lambda+b\me^{-\lambda t})q^2-\frac12 kq^2\\
+             &=\frac12m(\dot q+b\me^{-\lambda t}q)^2-\frac12mb\me^{-\lambda t}(\lambda+b\me^{-\lambda t})q^2-\frac12 kq^2\\
+             &=\frac12m\dot q^2+mb\me^{-\lambda t}\dot q q-\frac12(mb\lambda\me^{-\lambda t}+k)q^2\\
+             &=\frac12m\dot q^2-\frac12kq^2+mb\me^{-\lambda t}\dot q q-\frac12mb\lambda\me^{-\lambda t}q^2\\
+             &=\frac12m\dot q^2-\frac12kq^2+\frac{d}{dt}(\frac12 mb\me^{-\lambda t}q^2)\\
+             &=\bar{L}+\frac{d}{dt}(\frac12 mb\me^{-\lambda t}q^2)
+        \end{align*}
+    \item $$\bar{L}=\frac12m\dot q^2-\frac12kq^2$$
+    \item $$\bar{H}=\frac{\bar{p}^2}{2m}+\frac12kq^2$$
+    其中$\bar{p}=m\dot q$,描述的系统是谐振子.
+    \item 
+    只需证两者化为相同的二阶微分方程即可
+    由原来的哈密顿正则方程,
+    $$\dot p=-\frac{\partial H}{\partial q}=b\me^{-\lambda t}p-mb\me^{-\lambda t}(\lambda+b\me^{-\lambda t})q-kq$$
+    而前面得到
+    $$p=m(\dot q+b\me^{-\lambda t}q)$$
+    因此
+    \begin{align*}
+        \dot p&=\frac{d}{dt}(m(\dot q+b\me^{-\lambda t}q))\\
+              &=m\ddot q-\lambda mb\me^{-\lambda t}q+b\me^{-\lambda t}\dot q\\
+    \end{align*}
+    可以知道化为
+    $$\ddot q+\frac km q=0$$
+    \end{enumerate}
+\end{solution}
+\problem{某单自由度系统的拉格朗日量为$L=\frac12m\me^{\lambda t}(\dot q^2-\omega^2 q^2)$},其中$m,\lambda$都是正的常数.
+\begin{enumerate}[label=(\arabic*)]
+    \item 求该系统的哈密顿量和哈密顿正则方程;
+    \item 根据哈密顿正则方程在初始条件$q(0)=0,p(0)=p_0$下的解;
+    \item 根据(2)的解,在相平面上定性画出系统随时间演化的相轨迹,说明其物理意义.
+\end{enumerate}
+\begin{solution}
+    \begin{enumerate}[label=(\arabic*)]
+        \item 
+        $$p=\frac{\partial L}{\partial \dot q=m\me^{\lambda t}}\dot q$$
+        因此
+        $$H=\frac12\me^{-\lambda t}\frac{p^2}{m}+\frac12 m\me^{\lambda t}\omega^2q^2$$
+        正则方程
+        \begin{align*}
+            \dot q&=\frac{\partial H}{\partial p}=\me^{-\lambda t}\frac{p}{m}\\
+            \dot p&=mq\omega^2\me^{\lambda t}
+        \end{align*}
+        \item 消元得到
+        $$\ddot q+\lambda \dot q+\omega^2 q=0$$
+        代入初始条件解得
+        $$q=\frac{p_0}{\sqrt{\lambda^2-4\omega^2}}\sinh({\sqrt{\lambda^2-4\omega^2}t})\me^{-\frac12\lambda t}$$
+    \end{enumerate}
+\end{solution}
+\problem{质量为$m$的粒子在重力作用下束缚在旋转抛物面$z=x^2+y^2$上运动,选取柱坐标系$\{r,\phi,z\}$，不考虑摩擦
+\begin{enumerate}[label=(\arabic*)]
+    \item 写出粒子的劳斯函数
+    \item 写出劳斯函数表达的运动方程
+\end{enumerate}}
+\begin{solution}
+    \begin{enumerate}[label=(\arabic*)]
+        \item 
+        $$L=\frac12m(\dot r^2+r^2\dot\phi^2+\dot z^2)-mgz+\lambda(z-r^2)$$
+        注意到可遗坐标为$\phi$,且有$p_\phi=mr^2\dot\phi$
+        \begin{align*}
+            R&=p_\phi\dot\phi-L\\
+             &=\frac{p_\phi^2}{2mr^2}-\frac12m\dot r^2-\frac12m\dot z^2+mgz-\lambda(z-r^2)
+        \end{align*}
+        \item 
+        \begin{align*}
+            \dot p_\phi&=0\\
+            m\ddot r&=\frac{p_phi}{mr^3}-2\lambda r\\
+            m\ddot z&=-g+\lambda
+        \end{align*}
+    \end{enumerate}
+\end{solution}
+\problem{考虑一维谐振子,对拉格朗日量$L(t,\dot q,q)$中广义坐标和广义速度同时做勒让德变换$\{q,\dot q\}\to\{f,p\}$
+\begin{enumerate}[label=(\arabic*)]
+    \item 求变换得到的$G=G(t,f,p)$
+    \item 写出用$\{f,p\}$表达的运动方程，并证明其与拉格朗日方程等价.
+\end{enumerate}
+}
+\begin{solution}
+    \begin{enumerate}[label=(\arabic*)]
+        \item 
+        $$f=\frac{\partial L}{\partial q}=-\omega^2q,p\dot q$$
+        $$G=\frac12p^2-\frac{f^2}{2\omega^2}$$
+        \item 
+        运动方程
+        \begin{align*}
+            \dot f+\omega^2p&=0\\
+            \dot p&=f
+        \end{align*}
+        即$\ddot f+\omega^2f=0$,显然和拉格朗日方程导出的运动方程等价.
+    \end{enumerate}
+\end{solution}
