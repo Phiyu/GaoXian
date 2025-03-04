@@ -142,8 +142,42 @@
         \[
             -\frac{\delta S}{\delta y} = \frac{\dd}{\dd \lambda} \left( \frac{y'}{\sqrt{x'^2+y'^2}} \right) = \frac{y'' x'^2}{\left(x'^2 + y'^2\right)^{\frac{3}{2}}} = 0
         \]
-        \item \begin{enumerate}[label=(\arabic{enumi}.\arabic*)]
-            \item 未完工
+        \item 由曲面方程 \(z = z(x(\lambda),y(\lambda))\), 
+        \begin{align*}
+            S[x,y]  &= \int \dd \lambda \sqrt{x'^2 + y'^2 + z'^2} 
+                    = \int \dd \lambda \sqrt{x'^2 + y'^2 + \left(\frac{\pp z}{\pp x} x' + \frac{\pp z}{\pp y} y'\right)^2} \\
+                    &= \int \dd \lambda \sqrt{\left[1 + \left(\frac{\pp z}{\pp x}\right)^2\right] x'^2 + 2 \frac{\pp z}{\pp x} \frac{\pp z}{\pp y} x' y' + \left[1 + \left(\frac{\pp z}{\pp y}\right)^2\right] y'^2}\\
+        \end{align*}
+        
+        \begin{enumerate}[label=(\arabic{enumi}.\arabic*)]
+            \item 平面\( z = ax + by + c \), 则曲线长度泛函为
+            \[
+                S[x,y] = \int \dd \lambda \sqrt{(1 + a^2) x'^2 + 2 a b x' y' + (1 + b^2) y'^2} = \int \dd \lambda L\left(x',y'\right),
+            \]
+            分别对 \(x(\lambda)\) 和 \(y(\lambda)\) 做变分, 得到
+            \begin{align*}
+                \delta S = \int \dd \lambda \left(\frac{\pp L}{\pp x'} \delta x'\right) &= \int \dd \lambda \left(\frac{(1 + a^2)x' + ab y'}{\sqrt{(1 + a^2) x'^2 + 2 a b x' y' + (1 + b^2) y'^2}}\right) \delta x' \\
+                &\simeq \int \dd \lambda \left(- \frac{\dd}{\dd \lambda} \frac{(1 + a^2)x' + ab y'}{\sqrt{(1 + a^2) x'^2 + 2 a b x' y' + (1 + b^2) y'^2}}\right) \delta x \\
+                \delta S = \int \dd \lambda \left(\frac{\pp L}{\pp y'} \delta y'\right) &= \int \dd \lambda \left(\frac{(1 + b^2)y' + ab x'}{\sqrt{(1 + a^2) x'^2 + 2 a b x' y' + (1 + b^2) y'^2}}\right) \delta y' \\
+                &\simeq \int \dd \lambda \left(- \frac{\dd}{\dd \lambda} \frac{(1 + b^2)y' + ab x'}{\sqrt{(1 + a^2) x'^2 + 2 a b x' y' + (1 + b^2) y'^2}}\right) \delta y
+            \end{align*}
+            泛函导数取极值有
+            \begin{align*}
+                -\frac{\delta S}{\delta x} &= \frac{\dd}{\dd \lambda} \frac{(1 + a^2)x' + ab y'}{\sqrt{(1 + a^2) x'^2 + 2 a b x' y' + (1 + b^2) y'^2}} \\
+                &=  \frac{(1 + a^2 + b^2) y' (y' x'' - x' y'')}{\left((1 + a^2) x'^2 + 2 a b x' y' + (1 + b^2) y'^2\right)^{\frac{3}{2}}} = 0 \\
+                -\frac{\delta S}{\delta y} &= \frac{\dd}{\dd \lambda} \frac{(1 + b^2)y' + ab x'}{\sqrt{(1 + a^2) x'^2 + 2 a b x' y' + (1 + b^2) y'^2}} \\
+                &=  \frac{(1 + a^2 + b^2) x' (x' y'' - y' x'')}{\left((1 + a^2) x'^2 + 2 a b x' y' + (1 + b^2) y'^2\right)^{\frac{3}{2}}} = 0
+            \end{align*}
+            这两个方程本质上是一样的, 说明曲线满足 \(x' y'' - y' x'' = 0\),
+            \begin{align*}
+                \frac{\dd}{\dd \lambda} \left(\frac{y'}{x'}\right) = \frac{x' y'' - y' x''}{x'^2} = 0  \implies \frac{y'}{x'} = const.
+            \end{align*}
+            即曲线是平面内的直线, \(x(\lambda) = \alpha \lambda + \beta, y(\lambda) = \gamma \lambda + \epsilon.\)
+
+            \item 球面\( z = \sqrt{R^2 - x^2 - y^2} \), 则曲线长度泛函为
+            \[
+                S[x,y] = \int \dd \lambda \sqrt{\frac{R^2 - y^2}{R^2 - x^2 - y^2} x'^2 + \frac{2xy}{R^2 - x^2 - y^2} x' y' + \frac{R^2 - x^2}{R^2 - x^2 - y^2} y'^2} = \int \dd \lambda L\left(x, y, x',y'\right),
+            \]
         \end{enumerate}
     \end{enumerate}
 \end{solution}
