@@ -1,1 +1,130 @@
 \chapter{最小作用量原理}
+
+\problem{}
+\begin{solution}
+    待施工.
+\end{solution}
+
+\problem{}
+\begin{solution}
+    待施工.
+\end{solution}
+
+
+\problem{}
+\begin{solution}
+    待施工.
+\end{solution}
+
+
+\problem{}
+\begin{solution}
+    待施工.
+\end{solution}
+
+
+\problem{}
+\begin{solution}
+    待施工.
+\end{solution}
+
+
+\problem{}
+\begin{solution}
+    待施工.
+\end{solution}
+
+
+\problem{}
+\begin{solution}
+    待施工.
+\end{solution}
+
+
+\problem{}
+\begin{solution}
+    待施工.
+\end{solution}
+
+
+
+\problem{}
+\begin{solution}
+    待施工.
+\end{solution}
+
+
+
+\problem{}
+\begin{solution}
+    待施工.
+\end{solution}
+
+
+
+\problem{考虑与标量场相互作用的粒子作用量的 4 维形式和 3 维形式, 分别求粒子运动方程的 4 维形式和 3 维形式.}
+\begin{solution}
+    Minkowski 时空标量场中的粒子，其作用量为
+    \[
+        S = - m c \int \dd \tau \,\me^{\Phi} \sqrt{- \eta_{\mu \nu} \frac{\dd x^\mu}{\dd \tau} \frac{\dd x^\nu}{\dd \tau}},
+    \]
+    将被固有时 $\tau$ 参数化后的世界线 (作用量) 对 $x^\mu$ 作变分:
+    \begin{align*}
+        \delta S &= - mc \int \dd \tau \left[\frac{\pp}{\pp x^\mu} \left(\me^{\Phi} \sqrt{- \eta_{\mu \nu} \frac{\dd x^\mu}{\dd \tau} \frac{\dd x^\nu}{\dd \tau}}\right) \delta x^\mu + \frac{\pp}{\pp \left(\frac{\dd x^\mu}{\dd \tau}\right)} \left(\me^{\Phi} \sqrt{- \eta_{\mu \nu} \frac{\dd x^\mu}{\dd \tau} \frac{\dd x^\nu}{\dd \tau}}\right)\delta \left(\frac{\dd x^\mu}{\dd \tau}\right)\right]  \\
+        &= - mc \int \dd \tau \left[\frac{\pp \Phi}{\pp x^\mu} \me^{\Phi} \sqrt{- \eta_{\mu \nu} \frac{\dd x^\mu}{\dd \tau} \frac{\dd x^\nu}{\dd \tau}} \delta x^\mu - \me^{\Phi} \frac{\eta_{\mu \nu} \frac{\dd x^\nu}{\dd \tau}}{\sqrt{- \eta_{\mu \nu} \frac{\dd x^\mu}{\dd \tau} \frac{\dd x^\nu}{\dd \tau}}} \delta \left(\frac{\dd x^\mu}{\dd \tau}\right)\right] \\
+        & \simeq -mc \int \dd \tau \left[\frac{\pp \Phi}{\pp x^\mu} \me^{\Phi} \sqrt{- \eta_{\mu \nu} \frac{\dd x^\mu}{\dd \tau} \frac{\dd x^\nu}{\dd \tau}} + \frac{\dd}{\dd \tau} \left(\me^{\Phi} \frac{\eta_{\mu \nu} \frac{\dd x^\nu}{\dd \tau}}{\sqrt{- \eta_{\mu \nu} \frac{\dd x^\mu}{\dd \tau} \frac{\dd x^\nu}{\dd \tau}}}\right) \right] \delta x^\mu,
+    \end{align*}
+    因为 4-速度的模方是常数 $\eta_{\mu \nu} \frac{\dd x^\mu}{\dd \tau} \frac{\dd x^\nu}{\dd \tau} = - c^2$, 且由度规升降 $\eta_{\mu \nu} \frac{\dd x^\nu}{\dd \tau} \equiv \frac{\dd x_\mu}{\dd \tau}$, 所以我们可以写出 Euler-Lagrange 方程:
+    \begin{align*}
+        - \frac{1}{mc} \frac{\delta S}{\delta x^\mu} &= \frac{\pp \Phi}{\pp x^\mu} \me^\Phi c + \frac{\dd}{\dd \tau} \left(\frac{\me^\Phi}{c} \frac{\dd x_\mu}{\dd \tau}\right) = 0 \\
+        &= c \frac{\pp \Phi}{\pp x^\mu} \me^\Phi + \frac{1}{c} \frac{\dd x_\mu}{\dd \tau} \frac{\pp \me^\Phi}{\pp \tau} + \frac{\me^\Phi}{c} \frac{\dd^2 x_\mu}{\dd \tau^2} = 0 \\
+        &= c \frac{\pp \Phi}{\pp x^\mu} \me^\Phi + \frac{1}{c} \frac{\dd x_\mu}{\dd \tau} \frac{\pp x^\nu}{\pp \tau} \frac{\pp \Phi (x^\mu)}{\pp x^\nu} \me^\Phi + \frac{\me^\Phi}{c} \frac{\dd^2 x_\mu}{\dd \tau^2} = 0,
+    \end{align*}
+    即 4 维形式的运动方程
+    \[
+        \frac{\dd^2 x_\mu}{\dd \tau^2} + \frac{\pp \Phi}{\pp x^\nu} \frac{\pp x^\nu}{\pp \tau} \frac{\dd x_\mu}{\dd \tau} + c^2 \frac{\pp \Phi}{\pp x^\mu} = 0, \quad \mu = 0, 1, 2, 3.
+    \]
+    标量场作用下的作用量的 3 维形式为
+    \[
+        S = - m c \int \dd t\,\me^\Phi \sqrt{1- \frac{\delta_{ij}}{c^2} \frac{\dd x^i}{\dd t} \frac{\dd x^j}{\dd t}},
+    \]
+    对 3 维坐标 $x^i$ 作变分:
+    \begin{align*}
+        \delta S &= - mc \int \dd t \left[\frac{\pp}{\pp x^i} \left(\me^\Phi \sqrt{1- \frac{\delta_{ij}}{c^2} \frac{\dd x^i}{\dd t} \frac{\dd x^j}{\dd t}}\right) \delta x^i + \frac{\pp}{\pp \left(\frac{\dd x^i}{\dd t}\right)} \left(\me^\Phi \sqrt{1- \frac{\delta_{ij}}{c^2} \frac{\dd x^i}{\dd t} \frac{\dd x^j}{\dd t}}\right) \delta \left(\frac{\dd x^i}{\dd t}\right)\right] \\
+        &= - mc \int \dd t \left[\frac{\pp \Phi}{\pp x^i} \me^\Phi \sqrt{1- \frac{\delta_{ij}}{c^2} \frac{\dd x^i}{\dd t} \frac{\dd x^j}{\dd t}} \delta x^i - \me^\Phi \frac{\delta_{ij} \frac{\dd x^j}{\dd t} \delta \left(\frac{\dd x^i}{\dd t}\right)}{c^2 \sqrt{1- \frac{\delta_{ij}}{c^2} \frac{\dd x^i}{\dd t} \frac{\dd x^j}{\dd t}}}\right] \\
+        & \simeq - mc \int \dd t \left[\frac{\pp \Phi}{\pp x^i} e^\Phi \sqrt{1 - \frac{\vec{v}^2}{c^2}} + \frac{\dd}{\dd t} \left(\frac{\me^\Phi}{c^2} \frac{\frac{\dd x_i}{\dd t}}{\sqrt{1 - \frac{\vec{v}^2}{c^2}}}\right)\right] \delta  x^i, \\
+        - \frac{\delta S}{\delta x^i} &= m c \frac{\pp \Phi}{\pp x^i} \me^\Phi \sqrt{1 - \frac{\vec{v}^2}{c^2}} + \frac{\me^\Phi}{c^2} \dot{\Phi} \frac{mc \frac{\dd x_i}{\dd t}}{\sqrt{1 - \frac{\vec{v}^2}{c^2}}} + \frac{\me^\Phi}{c^2} \frac{mc \frac{\dd^2 x_i}{\dd t^2}}{\sqrt{1 - \frac{\vec{v}^2}{c^2}}} = 0,
+    \end{align*}
+    3-动量定义为 $p_i \equiv m \frac{\dd x_i}{\dd t} \frac{\dd t}{\dd \tau} \equiv m \frac{\dd x_i}{\dd t} \frac{1}{\sqrt{1 - \frac{\vec{v}^2}{c^2}}}$, 则上式整理为, 
+    \[
+        \frac{\me^\Phi}{c} \left(\dot{\Phi} p_i + \dot{p}_i\right) + mc \frac{\pp \Phi}{\pp x^i} \me^\Phi \sqrt{1 - \frac{\vec{v}^2}{c^2}} = 0,
+    \]
+    即 3 维形式的运动方程
+    \[
+        \dot{p}_i + \dot{\Phi} p_i + mc^2 \sqrt{1 - \frac{\vec{v}^2}{c^2}} \frac{\pp \Phi}{\pp x^i} = 0, \quad i = 1, 2, 3.
+    \]
+\end{solution}
+
+
+
+\problem{电磁场中带电粒子作用量的 4 维形式和 3 维形式分别为
+    \begin{align*}
+        S = \int \dd \tau L, \quad L = - m c \sqrt{- u_\mu u^\mu} + \frac{e}{c} A_\mu u^\mu, \\
+        S = \int \dd \tau L, \quad L = - m c^2 \sqrt{1 - \frac{\vec{v}^2}{c^2}} - e \Phi + \frac{e}{c} \vec{v} \cdot \vec{A}.
+    \end{align*}
+    \begin{enumerate}[label=(\arabic*)]
+        \item 求粒子的 4-共轭动量 $P_\mu \equiv \frac{\pp L}{\pp u^\mu}$ 和 3-共轭动量 $P_i \equiv \frac{\pp L}{\pp \dot{x}^i}$;
+        \item 分别求粒子运动方程的 4 维形式和 3 维形式; 
+        \item 若 $E$ 由式
+        \[
+            E := c p^0 = m c u^0 = m c^2 \frac{\dd t}{\dd \tau} = \frac{m c^2}{\sqrt{1 - \frac{\vec{v}^2}{c^2}}}
+        \]
+        给出, 证明 $\frac{\dd E}{\dd t} = e \vec{v} \cdot \vec{E}$.
+    \end{enumerate}
+}
+
+\begin{solution}
+    \begin{enumerate}[label=(\arabic*)]
+        \item 待施工.
+    \end{enumerate}
+\end{solution}
