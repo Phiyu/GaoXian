@@ -2,7 +2,6 @@
 \problem{考虑$2$维欧氏空间, 取一般坐标$\{u,v\}$, 与直角坐标关系为$x = x(u,v)$, $y = y(u,v)$. 求$2$维欧氏空间度规在$\{u,v\}$坐标下的形式.}
 \begin{solution}
     由线元的定义, 我们有
-<<<<<<< HEAD
     \begin{align*}
         \dd s^2 &= \left(\frac{\pp x}{\pp u} \dd u + \frac{\pp x}{\pp v} \dd v\right)^2 + \left(\frac{\pp y}{\pp u} \dd u + \frac{\pp y}{\pp v} \dd v\right)^2 \\
         &= \left(\frac{\pp x}{\pp u}\right)^2 \dd u^2 + \left(\frac{\pp x}{\pp v}\right)^2 \dd v^2 + \frac{\pp x}{\pp u} \frac{\pp x}{\pp v} \dd u \dd v + \left(\frac{\pp y}{\pp u}\right)^2 \dd u^2 + \left(\frac{\pp y}{\pp v}\right)^2 \dd v^2 + \frac{\pp y}{\pp u} \frac{\pp y}{\pp v} \dd u \dd v \\
@@ -19,26 +18,6 @@
     \[
         g_{ij} = \begin{pmatrix}
             \left(\frac{\pp x}{\pp u}\right)^2 & \frac{\pp x}{\pp u} \frac{\pp x}{\pp v} \\[0.8em]
-=======
-    \[
-        \begin{aligned}
-            \dd s^2 &= \left(\frac{\pp x}{\pp u} \dd u + \frac{\pp x}{\pp v} \dd v\right)^2 + \left(\frac{\pp y}{\pp u} \dd u + \frac{\pp y}{\pp v} \dd v\right)^2 \\
-            &= \left(\frac{\pp x}{\pp u}\right)^2 \dd u^2 + \left(\frac{\pp x}{\pp v}\right)^2 \dd v^2 + \frac{\pp x}{\pp u} \frac{\pp x}{\pp v} \dd u \dd v + \left(\frac{\pp y}{\pp u}\right)^2 \dd u^2 + \left(\frac{\pp y}{\pp v}\right)^2 \dd v^2 + \frac{\pp y}{\pp u} \frac{\pp y}{\pp v} \dd u \dd v \\
-            &= \begin{pmatrix}
-                \dd u & \dd v
-            \end{pmatrix} \begin{pmatrix}
-                \left(\frac{\pp x}{\pp u}\right)^2 & \frac{\pp x}{\pp u} \frac{\pp x}{\pp v} \\
-                \frac{\pp x}{\pp v} \frac{\pp y}{\pp u} & \left(\frac{\pp y}{\pp v}\right)^2
-            \end{pmatrix} \begin{pmatrix}
-                \dd u \\ \dd v
-            \end{pmatrix}
-        \end{aligned}
-    \]
-    因此, 度规在$\{u,v\}$坐标下的形式为
-    \[
-        g_{ij} = \begin{pmatrix}
-            \left(\frac{\pp x}{\pp u}\right)^2 & \frac{\pp x}{\pp u} \frac{\pp x}{\pp v} \\
->>>>>>> e2f4d337c0a2d96c9702479e46ac8aef91a117ff
             \frac{\pp x}{\pp v} \frac{\pp y}{\pp u} & \left(\frac{\pp y}{\pp v}\right)^2
         \end{pmatrix}
     \]
@@ -46,16 +25,12 @@
 
 \problem{考虑$3$维欧氏空间, 已知球坐标与直角坐标的关系为$x = r \sin\theta \cos\phi$, $y = r \sin\theta \sin\phi$, $z = r \cos\theta$. 求$3$维欧氏空间度规在球坐标下的形式.}
 \begin{solution}
-<<<<<<< HEAD
     考虑$3$维欧氏空间中的矢量$\vec{v} = x \h{x} + y \h{y} + z \h{z}$, 由球坐标$\begin{cases}
             x = r \sin\theta \cos\phi \\
             y = r \sin\theta \sin\phi \\
             z = r \cos\theta
         \end{cases}$
     构造坐标系的坐标基矢
-=======
-    考虑$3$维欧氏空间中的矢量$\vec{v}$, 由此构造坐标系的坐标基矢
->>>>>>> e2f4d337c0a2d96c9702479e46ac8aef91a117ff
     \[
         \begin{aligned}
             \frac{\pp \vec{v}}{\pp r} &= \sin\theta \cos\phi \,\h{x} + \sin\theta \sin\phi \,\h{y} + \cos\theta \,\h{z} \\
@@ -64,12 +39,7 @@
         \end{aligned}
     \]
     则线元可以写为
-<<<<<<< HEAD
     \begin{align*}
-=======
-    \[
-    \begin{aligned}
->>>>>>> e2f4d337c0a2d96c9702479e46ac8aef91a117ff
         \dd s^2 &= \dd \vec{v} \cdot \dd \vec{v} = g_{ij} \dd u^i \dd u^j\\
         &= \begin{pmatrix}
             \dd r & \dd \theta & \dd \phi
@@ -80,17 +50,11 @@
         \end{pmatrix} \begin{pmatrix}
             \dd r \\ \dd \theta \\ \dd \phi
         \end{pmatrix}
-<<<<<<< HEAD
     \end{align*}
-=======
-    \end{aligned}
-    \]
->>>>>>> e2f4d337c0a2d96c9702479e46ac8aef91a117ff
     其中$g_{ij} = g_{ji} = \frac{\pp \vec{v}}{\pp u^i} \cdot \frac{\pp \vec{v}}{\pp u^j} =
     \frac{\pp x}{\pp u^i} \frac{\pp x}{\pp u^j} + \frac{\pp y}{\pp u^i}
     \frac{\pp y}{\pp u^j} + \frac{\pp z}{\pp u^i} \frac{\pp z}{\pp u^j}$.
     
-<<<<<<< HEAD
     \vspace*{1em}
     由于坐标基矢正交, 即非对角元为零, 计算对角元得
     \begin{align*}
@@ -99,8 +63,6 @@
         g_{\phi\phi} &= \left(\frac{\pp x}{\pp \phi}\right)^2 + \left(\frac{\pp y}{\pp \phi}\right)^2 + \left(\frac{\pp z}{\pp \phi}\right)^2 = (-r \sin \theta \sin \phi)^2 + (r \sin \theta \cos \phi)^2 = r^2 \sin^2\theta.
     \end{align*}
 
-=======
->>>>>>> e2f4d337c0a2d96c9702479e46ac8aef91a117ff
     将$g_{ij}$代入线元, 得
     \[
         \dd s^2 = \begin{pmatrix}
@@ -122,7 +84,6 @@
         \end{pmatrix}
     \]
 \end{solution}
-<<<<<<< HEAD
 
 
 \problem{如图\ref{fig:3-3}所示, $2$维环面参数方程为 $\begin{cases}
@@ -137,5 +98,3 @@
     \label{fig:3-3}
 \end{figure}
 
-=======
->>>>>>> e2f4d337c0a2d96c9702479e46ac8aef91a117ff
