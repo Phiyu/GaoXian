@@ -1,21 +1,17 @@
 \chapter{变分法}
 \problem{给定\(f(t)\)的泛函\[S[f]=-\int \dd t\,\me^{-V(f(t))} \sqrt{1-(f'(t))^2}\]其中\(V\)是\(f\)的任意函数. 求\(S[f]\)取极值时, \(f(x)\)的欧拉-拉格朗日方程.}
 \begin{solution}
-    记 $L = \me^{-V(f(t))} \sqrt{1-(f'(t))^2}$, 则
-    \[
-        \frac{\pp L}{\pp f} = V \frac{\dd V}{\dd f} \me^{-V(f(t))} \sqrt{1-(f'(t))^2}, \qquad 
-        \frac{\pp L}{\pp f'} = \me^{-V(f(t))} \frac{f'(t)}{\sqrt{1-(f'(t))^2}}
-    \]
-    \[
-    \begin{aligned}
-        \delta S &= \int \dd t\,\left(V \frac{\dd V}{\dd f} \me^{-V(f(t))} \sqrt{1-(f'(t))^2} \delta f + \me^{-V(f(t))} \frac{f'(t)}{\sqrt{1-(f'(t))^2}} \delta f'\right)\\
-        &\simeq \int \dd t\,\left(V \frac{\dd V}{\dd f} \me^{-V(f(t))} \sqrt{1-(f'(t))^2} - \frac{\dd}{\dd t}\left(\me^{-V(f(t))} \frac{f'(t)}{\sqrt{1-(f'(t))^2}}\right)\right) \delta f
-    \end{aligned}
-    \]
-    因此, Euler-Lagrange 方程为
-    \[
-        - \frac{\delta S}{\delta f} = - V \frac{\dd V}{\dd f} f' \me^{-V(f(t))} \frac{f'}{\sqrt{1-f'^2}} + \me^{-V(f(t))} \frac{f'' + (1-f')f'^2}{(1 - f'^2)^{3/2}} - V \frac{\dd V}{\dd f} \me^{- V(f(t))} \sqrt{1-f'^2} = 0
-    \]
+    记 $L = -\me^{-V(f(t))} \sqrt{1-(f'(t))^2}$, 则
+    可以计算得到
+    \[\dfrac{\partial L}{\partial f}=-\me^{V(f(t))} \sqrt{1-f'(t)^2} V'(f(t))\]
+    \[\dfrac{\dd }{\dd t}\dfrac{\partial L}{\partial f'}=\frac{\me^{V(f(t))} \left(f''(t)-f'(t)^2 \left(f'(t)^2-1\right) V'(f(t))\right)}{\left(1-f'(t)^2\right)^{3/2}}\]
+    代入拉格朗日方程
+    \[\dfrac{\partial L}{\partial f}-\dfrac{\dd }{\dd t}\dfrac{\partial L}{\partial f'}=0\]
+    得到
+    \[\frac{\me^{V(f(t))} \left(\left(f'(t)^2-1\right) V'(f(t))-f''(t)\right)}{\left(1-f'(t)^2\right)^{3/2}}=0\]
+    排除所有非零项，最终结果为
+    \[\left(f'(t)^2-1\right) V'(f(t))-f''(t)=0\]
+    若\(V(f(t))\)是一个常数，那么上式对应\(f''(t)=0\)。
 \end{solution}
 
 \problem{给定\(f(t)\)的泛函\(S[f] = \int \dd t\,L\), 其中\(L = (f'(t))^2 + f(t) f'(t)+ \frac{1}{2} f(t) f''(t)\).\\[-0.8em]
