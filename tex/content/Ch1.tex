@@ -45,8 +45,9 @@
 \begin{solution}
     \[
         \begin{aligned}
-            \delta S & = \int \dd t \left(a^3\left(A(n) + 3B(n) \frac{a'^2}{n^2 a^2}\right) + n a^3 \left(\frac{\dd A}{\dd n} + 3\frac{\dd B}{\dd n}\frac{a'^2}{n^2 a^2} - \frac{3}{2}B(n)\frac{a'^2}{n^3 a^2}\right)\right) \delta n\\
-            -\frac{\delta S}{\delta n} & = -a^3 A - 3B \frac{a a'^2}{n^2} - n a^3 \frac{\dd A}{\dd n} - 3n \frac{\dd B}{\dd n} \frac{a a'^2}{n^2} + \frac{3}{2}nB\frac{a a'^2}{n^3} = 0
+            \delta S & = \int \dd t \left(a^3\left(A(n) + 3B(n) \frac{a'^2}{n^2 a^2}\right) + n a^3 \left(\frac{\dd A}{\dd n} + 3\frac{\dd B}{\dd n}\frac{a'^2}{n^2 a^2} - 6 B(n)\frac{a'^2}{n^3 a^2}\right)\right) \delta n\\
+            -\frac{\delta S}{\delta n} & = -a^3 A - 3B \frac{a a'^2}{n^2} - n a^3 \frac{\dd A}{\dd n} - 3n \frac{\dd B}{\dd n} \frac{a a'^2}{n^2} + 6nB\frac{a a'^2}{n^3}\\
+            &=-a^3 A + 3B \frac{a a'^2}{n^2} - n a^3 \frac{\dd A}{\dd n} - 3n \frac{\dd B}{\dd n} \frac{a a'^2}{n^2}= 0
         \end{aligned}
     \]
     \[
