@@ -156,7 +156,7 @@
             \frac{\partial H}{\partial Q}&=\omega^2 Q\me^{2\lambda t}
         \end{align*}
         于是,由全微分条件得到
-        $$H=\frac12 Q^2\me^{2\lambda t}+\frac12 P^2\me^{-2\lambda t}$$
+        $$H=\frac12 \omega^2 Q^2\me^{2\lambda t}+\frac12 P^2\me^{-2\lambda t}$$
     \end{enumerate}
 \end{solution}
 \problem{某单自由度系统的运动方程为$\dot q=aq+bp$和$\dot p=cq+dp$
@@ -181,11 +181,11 @@
         \begin{align*}
             dH&=\frac{\partial H}{\partial p}dp+\frac{\partial H}{\partial q}dq\\
               &=(aq+bp)dp+(ap-cq)dq\\
-              &=-cqdq+a(qdp+pdq)+apdp\\
-              &=-cqdq+ad(pq)+apdp
+              &=-cqdq+a(qdp+pdq)+bpdp\\
+              &=-cqdq+ad(pq)+bpdp
         \end{align*}
         积分即得到
-        $$H=-\frac12 cq^2+apq+\frac12 p^2$$
+        $$H=-\frac12 cq^2+apq+\frac12 b p^2$$
     \end{enumerate}
 \end{solution}
 \problem{考虑与标量场相互作用的相对论性粒子的拉格朗日量式(4.40),其中$\Phi(t,\textbf{x})=\frac{V(t,\textbf{x})}{mc^2}$.
@@ -210,18 +210,18 @@ $$(\eta_{\mu\nu})=
     以及广义动量
     $$\textbf{p}=\frac{\partial L}{\partial \textbf{v}}=\frac{m\textbf{v}\me^{\Phi}}{\sqrt{1-\frac{v^2}{c^2}}}$$
     反解得到
-    $$\textbf{v}=\frac{\textbf{pc}}{\sqrt{m^2c^2\me^{2\Phi}+p^2}}$$
+    $$\textbf{v}=\frac{\textbf{p}c}{\sqrt{m^2c^2\me^{2\Phi}+p^2}}$$
     最后得到哈密顿量
     $$H=\textbf{p}\cdot{\textbf{v}}-L=\sqrt{p^2c^2+m^2c^4\me^{2\Phi}}$$
     而前面已经得到了一个正则方程
-    $$\textbf{v}=\frac{\textbf{pc}}{\sqrt{m^2c^2\me^{2\Phi}+p^2}}$$
+    $$\textbf{v}=\frac{\textbf{p}c}{\sqrt{m^2c^2\me^{2\Phi}+p^2}}$$
     因此我们只需要考虑$\frac{d\textbf{p}}{dt}=-\frac{\partial H}{\partial \textbf{x}}$
     经过计算得到
     $$\frac{d\textbf{p}}{dt}=-\frac{m^2c^4\me^{2\Phi}}{\sqrt{p^2c^2+m^2c^4\me^{2\Phi}}}\nabla\Phi$$
     \item 
     \begin{align*}
-        H&=mc^2\me^{\Phi}\sqrt{\frac{p^2}{m^2c^2\me{2\Phi}}+1}\\
-         &=mc^2\me^{\Phi}(1+\frac{p^2}{2m^2c^2\me{2\Phi}})\\
+        H&=mc^2\me^{\Phi}\sqrt{\frac{p^2}{m^2c^2\me^{2\Phi}}+1}\\
+         &=mc^2\me^{\Phi}(1+\frac{p^2}{2m^2c^2\me^{2\Phi}})\\
          &=mc^2(1+\frac{V}{mc^2})(1+\frac{p^2}{2m^2c^2\me^{2\Phi}})\\
          &=mc^2+\frac12mv^2+V
     \end{align*}
