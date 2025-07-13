@@ -108,27 +108,130 @@
 \end{solution}
 
 
-\problem{}
+\problem{如图\ref{fig:4-4}所示，长为\(l\)质量为\(m\)的匀质硬杆，一端置于地面，一端靠在墙角，杆始终处于竖直平面内。忽略摩擦，已知杆相对质心的转动惯量为\(I=\frac{1}{12}m l^2\)。选择合适的广义坐标，写出系统的拉格朗日量并求系统的运动方程。}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.2\textwidth]{content/Figures/4-4}
+	\caption{ }
+	\label{fig:4-4}
+\end{figure}
+
 \begin{solution}
-    待施工.
+    为方便，选取杆与墙的夹角\(\theta\)为广义坐标，那么杆的质心坐标为
+    \begin{align*}
+    	x_c&=\frac{l}{2}\sin{\theta}\\
+    	y_c&=\frac{l}{2}\cos{\theta}
+    \end{align*}
+    计算出系统动能为
+    \[T=\frac{1}{2}m(\dot{x_c}^2+\dot{y_c}^2)+\frac{1}{2}I\dot{\theta}^2=\frac{1}{6}ml^2\dot{\theta}^2\]
+    而势能为
+    \[V=mgy_c=mg\frac{l}{2}\cos{\theta}\]
+    于是拉格朗日量为
+    \[L=T-V=\frac{1}{6}ml^2\dot{\theta}^2-mg\frac{l}{2}\cos{\theta}\]
+    代入欧拉-拉格朗日方程
+    \[\frac{\partial L}{\partial \theta}-\frac{\dd}{\dd t}\frac{\partial L}{\partial \dot{\theta}}=0\]
+    结果为
+    \[mg\frac{l}{2}\sin{\theta}-\frac{1}{3}ml^2\ddot{\theta}=0\]
+    整理为
+    \[\ddot{\theta}=\frac{3g}{2l}\sin{\theta}\]
 \end{solution}
 
 
-\problem{}
+\problem{如图\ref{fig:4-5}所示，半径为\(R\)的圆环固定于竖直平面内，两个质量为\(m\)的小球由自由长度为\(l\)的无质量弹簧连接，小球可沿圆环无摩擦滑动。选择合适的广义坐标，写出系统的拉格朗日量并求系统的运动方程。}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.2\textwidth]{content/Figures/4-5}
+	\caption{ }
+	\label{fig:4-5}
+\end{figure}
+
 \begin{solution}
-    待施工.
+    选两个小球相对参考线的转角\(\theta_1,\theta_2\)作为广义坐标。动能显然为
+    \[T=\frac{1}{2}m_1 R^2 \dot{\theta}_1^2+\frac{1}{2}m_2 R^2 \dot{\theta}_2^2\]
+    而势能则为
+    \[V=\frac{1}{2}k (2R\sin{\frac{\theta_2-\theta_1}{2}}-l)^2\]
+    拉格朗日量为
+    \[L=T-V=\frac{1}{2}m_1 R^2 \dot{\theta}_1^2+\frac{1}{2}m_2 R^2 \dot{\theta}_2^2-\frac{1}{2}k (2R\sin{\frac{\theta_2-\theta_1}{2}}-l)^2\]
+    代入欧拉-拉格朗日方程
+    \begin{align*}
+    	\frac{\partial L}{\partial \theta_1}-\frac{\dd}{\dd t}\frac{\partial L}{\partial \dot{\theta}_1}=0\\
+    	\frac{\partial L}{\partial \theta_2}-\frac{\dd}{\dd t}\frac{\partial L}{\partial \dot{\theta}_2}=0
+    \end{align*}
+    得到运动方程为
+    \begin{align*}
+    	k(2R\sin{\frac{\theta_2-\theta_1}{2}}-l)R\cos{\frac{\theta_2-\theta_1}{2}}-m_1 R^2 \ddot{\theta}_1=0\\
+    	-k(2R\sin{\frac{\theta_2-\theta_1}{2}}-l)R\cos{\frac{\theta_2-\theta_1}{2}}-m_2 R^2 \ddot{\theta}_2=0
+    \end{align*}
 \end{solution}
 
 
-\problem{}
+\problem{如图\ref{fig:4-6}所示，半径为\(R\)的圆环处于竖直平面内，中心轴固定，圆环可绕中心轴自由转动，设转动惯量为\(I\)。质量为\(m\)的粒子可以沿圆环无摩擦滑动。选择合适的广义坐标，写出系统的拉格朗日量并求系统的运动方程。}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.2\textwidth]{content/Figures/4-6}
+	\caption{ }
+	\label{fig:4-6}
+\end{figure}
+	
 \begin{solution}
-    待施工.
+    \begin{figure}[h]
+    	\centering
+    	\includegraphics[width=0.4\textwidth]{content/Figures/4-6-1}
+    	\caption{ }
+    	\label{fig:4-6-1}
+    \end{figure}
+    如图\ref{fig:4-6-1}选取广义坐标。以圆环中心为坐标原点，那么可以写出\(m\)的坐标为
+    \begin{align*}
+    	x&=-R\sin{\theta}\sin{\varphi}\\
+    	y&=R\sin{\theta}\cos{\varphi}\\
+    	z&=R\cos{\theta}
+    \end{align*}
+    动能为\footnote{此处的详细计算过程请看附带的mathematica代码。}
+    \begin{align*}
+    	T&=\frac{1}{2}I \dot\varphi^2+\frac{1}{2}m(\dot{x}^2+\dot{y}^2+\dot{z}^2)\\
+    	&=\frac{1}{2}(I+mR^2 \sin^2{\theta})\dot{\varphi}^2+\frac{1}{2}mR^2 \dot{\theta}^2
+    \end{align*}
+    而势能为
+    \[V=mgz=mgR\cos{\theta}\]
+    拉格朗日量为
+    \[L=T-V=\frac{1}{2}(I+mR^2 \sin^2{\theta})\dot{\varphi}^2+\frac{1}{2}mR^2 \dot{\theta}^2-mgR\cos{\theta}\]
+    代入欧拉-拉格朗日方程
+    \begin{align*}
+    	\frac{\partial L}{\partial \theta}-\frac{\dd}{\dd t}\frac{\partial L}{\partial \dot{\theta}}=0\\
+    	\frac{\partial L}{\partial \varphi}-\frac{\dd}{\dd t}\frac{\partial L}{\partial \dot{\varphi}}=0
+    \end{align*}
+    得到运动方程为
+    \begin{align*}
+    	mgR \sin{\theta}-m R^2 \ddot{\theta}+m R^2 \sin{\theta} \cos{\theta} \dot{\varphi}^2=0\\
+    	-\left(I+m R^2 \sin^2{\theta}\right)\ddot{\varphi} -2 m R^2 \sin{\theta} \cos{\theta}\dot{\varphi}\dot{\theta}=0
+    \end{align*}
 \end{solution}
 
 
-\problem{}
+\problem{已知拉格朗日量在广义坐标的变换\(q^a\to \tilde{q}^a\)下不变，即有\(\tilde{L}(t,\tilde{q},\dot{\tilde{q}})=L(t,q,\dot{q})\)。（1）
+	利用广义速度的变换(2.13)，根据广义动量的定义\(p_a=\frac{\partial L}{\partial \dot{q}^a}\)和\(\tilde{p}_a=\frac{\partial L}{\partial \dot{\tilde{q}}^a}\)，证明广义动量的变换为\(\tilde{p}_a=\frac{\partial q^b}{\partial \tilde{q}^a}p_b\)；（2）在平面极坐标下写出非相对论性自由粒子的拉格朗日量，并求\(\{p_x, p_y\}\)和\(\{p_r, p_\phi\}\)的关系，以验证（1）的结论。}
+
 \begin{solution}
-    待施工.
+    （1）首先将书上(2.13)抄于此处
+    \[\frac{\partial\dot{\tilde{q}}^a}{\partial\dot{q}^b}=\frac{\partial\tilde{q}^a}{\partial\tilde{q}^b},\frac{\partial \dot{q}^a}{\partial \dot{\tilde{q}}^b}=\frac{\partial q^a}{\partial \tilde{q}^b}\]
+    接下来进行证明。只需计算
+    \[\tilde{p}_a=\frac{\partial L}{\partial \dot{\tilde{q}}^a}=\frac{\partial L}{\partial \dot{q}^b}\frac{\partial \dot{q}^b }{\partial \dot{\tilde{q}}^a}=\frac{\partial q^b}{\partial \tilde{q}^a}\frac{\partial L}{\partial \dot{q}^b}=\frac{\partial q^b}{\partial \tilde{q}^a} p_b\]
+    证毕。
+    
+    （2）平面极坐标系自由粒子的拉格朗日量应当记得为
+    \[L=\frac{1}{2}m(\dot{r}^2+r^2\dot{\phi}^2)\]
+    极坐标系与直角坐标系的关系为
+    \begin{align*}
+    	x=r\cos{\phi}\\
+    	y=r\sin{\phi}
+    \end{align*}
+    那么可以算出
+    \[p_r=\frac{\partial L}{\partial \dot{r}}=m\dot{r}=m\frac{x\dot{x}+y\dot{y}}{\sqrt{x^2+y^2}}=\frac{x p_x+y p_y}{\sqrt{x^2+y^2}}\]
+    \[p_\phi=\frac{\partial L}{\partial \dot{\phi}}=mr^2\dot{\phi}=m(x\dot{y}-y\dot{x})=x p_y-y p_x\]
+    如果直接代入公式，那么结果为
+    \[p_r=\frac{\partial x}{\partial r}p_x+\frac{\partial y}{\partial r}p_y=\cos{\phi}p_x+\sin{\phi}p_y=\frac{x p_x+y p_y}{\sqrt{x^2+y^2}}\]
+    \[p_\phi=\frac{\partial x}{\partial \phi}p_x+\frac{\partial y}{\partial \phi}p_y=-r\sin{\phi}p_x+r\cos{\phi}p_y=-y p_x+x p_y\]
+    验证完毕。
 \end{solution}
 
 
