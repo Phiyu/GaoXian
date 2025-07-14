@@ -322,3 +322,87 @@
         \item 待施工.
     \end{enumerate}
 \end{solution}
+
+
+
+\problem{由引力场中粒子的作用量(4.53)出发，证明粒子的运动方程为\(\frac{\dd u^\sigma}{\dd \tau}+{\Gamma^\sigma}_{\mu\nu}u^\mu u^\nu=0\)，其中\(u^\mu\)为粒子的 4-速度，系数\({\Gamma^\sigma}_{\mu\nu}=\frac{1}{2}g^{\sigma\rho}(\frac{\partial g_{\rho\nu}}{\partial x^\mu}+\frac{\partial g_{\rho\mu}}{\partial x^\nu}-\frac{\partial g_{\mu\nu}}{\partial x^\rho})\)被称为列维-契维塔联络。}
+
+\begin{solution}
+	待施工.
+\end{solution}
+
+
+
+\problem{观察到某非相对论性自由粒子\(t = 0\)时刻处于\(x = 0\)处，\(t_*\)时刻处于\(x_*\)处。（1）考虑三种运动方式：匀速直线运动\(x(t)=x_* \frac{t}{t_*}\)，匀加速运动\(x(t)=x_*\left(\frac{t}{t_*}\right)^2\)和谐振动\(x(t)=x_*\sin{\left(\frac{\pi}{2} \frac{t}{t_*}\right)}\)，都满足端点条件，证明匀速直线运动对应的作用量数值最小；（2）考虑运动方式\(x(t)=x_*\left(\frac{t}{t_*}\right)^n\)，也都满足端点条件，证明当\(n=1\)（即匀速直线运动）时，作用量取最小值。}
+
+\begin{solution}
+	（1）非相对论自由粒子拉格朗日量为\(L=T=\frac{1}{2}m \dot{x}^2\)，于是其作用量可写为
+	\[S=\int_{0}^{t_*}\frac{1}{2}m \dot{x}(t)^2 \dd t\]
+	代入不同的\(x(t)\)计算数值即可，结果为\footnote{计算过程见mathematica代码。}：
+	\begin{align*}
+		S=\begin{cases}
+			\frac{m x_*^2}{2 t_*},  x(t)=x_* \frac{t}{t_*}\\
+			\frac{2 m x_*^2}{3 t_*}, x(t)=x_*\left(\frac{t}{t_*}\right)^2\\
+			\frac{\pi ^2 m x_*^2}{16 t_*}, x(t)=x_*\sin{\left(\frac{\pi}{2} \frac{t}{t_*}\right)}
+		\end{cases}
+	\end{align*}
+	对比系数可知匀速运动的作用量数值最小。
+	
+	（2）\(x(t)=x_*\left(\frac{t}{t_*}\right)^n\)，代入计算出作用量为
+	\[S=\int_{0}^{t_*}\frac{1}{2}m \dot{x}(t)^2 \dd t=\frac{n^2}{4n-2}\frac{m x_*^2}{t_*}\]
+	求导可知
+	\[\frac{\partial S}{\partial n}=\frac{(n-1) n}{(2n-1)^2}\frac{m x_*^2}{t_*}\]
+	最小值点为\(n=1\)，为匀速直线运动，证毕。
+\end{solution}
+
+
+
+\problem{取竖直向上为\(z\)，已知自由落体小球的拉格朗日量为\(L=\frac{1}{2}m\dot{z}^2-mgz\)，假设小球在\(t_1\)时刻处在\(z_1\)，在\(t_2\)时刻处在\(z_2\)。（1）求\(z(t)\)的运动方程，并求满足上述端点条件的定解\(z_{cl}(t)\)；（ 2）求此定解\(z_{cl} (t)\)对应的作用量的数值\(S_{cl}\)；（3）相对于其他非真实的运动，验证\(Scl\)是最小还是最大？（提示，令\(z(t)=z_{cl}(t)+\epsilon \delta z(t)\)，有\(S-S_{cl}=\epsilon \delta S+\frac{\epsilon^2}{2}\delta^2 S+\cdots\)。因为\(\delta S=0\)，所以即需要验证二阶变分\(\delta^2 S\)是正的还是负的。）}
+
+\begin{solution}
+	（1）由欧拉-拉格朗日方程
+	\[\frac{\partial L}{\partial z}-\frac{\dd}{\dd t}\frac{\partial L}{\partial \dot{z}}=0\]
+	得到运动方程为
+	\[-mg-m\ddot{z}=0\]
+	即\(\ddot{z}=g\)，\(z(t)=a+bt+\frac{1}{2}gt^2\)，结合初始条件，得到
+	\begin{align*}
+		a&=-\frac{-g t_1^2 t_2+g t_1 t_2^2-2 t_1 z_2+2 t_2 z_1}{2 (t_1-t_2)}\\
+		b&=-\frac{g t_1^2-g t_2^2-2 z_1+2 z_2}{2 (t_1-t_2)}
+	\end{align*}
+	也就是说
+	\[z_{cl}(t)=-\frac{-g t_1^2 t_2+g t_1 t_2^2-2 t_1 z_2+2 t_2 z_1}{2 (t_1-t_2)}-\frac{g t_1^2-g t_2^2-2 z_1+2 z_2}{2 (t_1-t_2)}t+\frac{1}{2}g t^2\]
+	
+	（2）作用量为\footnote{以下计算使用mathematica。}
+	\begin{align*}
+		S_{cl}&=\int_{t_1}^{t_2} L(z_{cl}(t),\dot{z}_{cl}(t),t)\dd t\\
+		&=\int_{t_1}^{t_2} \left(\frac{1}{2}m\dot{z}_{cl}(t)^2-mgz_{cl}(t) \right)\dd t\\
+		&=\frac{1}{8} m (t_2-t_1) \left(g^2 (t_2-t_1)^2-4 g (z_1+z_2)+\frac{4 (z_2-z_1)^2}{(t_2-t_1)^2}\right)
+	\end{align*}
+	
+	（3）考虑对作用量进行变分，即
+	\begin{align*}
+		S[z_{cl}+\epsilon \delta z]-S[z_{cl}]&=\int_{t_1}^{t_2} \left[L(z_{cl}+\epsilon \delta z,\dot{z}_{cl}+\epsilon \delta \dot{z},t)-L(z_{cl},\dot{z}_{cl},t)\right]\dd t\\
+		&=\int_{t_1}^{t_2}\left[\frac{1}{2}m(\dot{z}_{cl}+\epsilon \delta \dot{z})^2-mg(z_{cl}+\epsilon \delta z)-(\frac{1}{2}m\dot{z}_{cl}^2-mgz_{cl})\right]\dd t\\
+		&=\int_{t_1}^{t_2}\left[\epsilon m\dot{z}_{cl}\delta \dot{z}-\epsilon mg \delta z+\epsilon^2\frac{1}{2}m \delta \dot{z}^2 \right]\dd t\\
+		&=\epsilon m \dot{z}\delta z(t)\bigg|_{t_1}^{t_2}+\epsilon\int_{t_1}^{t_2} \left[-m\ddot{z}_{cl}-mg\right]\dd t+\epsilon^2\int_{t_1}^{t_2}\frac{1}{2}m \delta \dot{z}^2 \dd t\\
+		&=\epsilon^2\int_{t_1}^{t_2}\frac{1}{2}m \delta \dot{z}^2 \dd t\\
+		&\geq 0
+	\end{align*}
+	因此\(S_{cl}\)为最小作用量。
+\end{solution}
+
+
+
+\problem{}
+\begin{solution}
+	待施工.
+\end{solution}
+
+
+
+\problem{}
+\begin{solution}
+	待施工.
+\end{solution}
+
+
