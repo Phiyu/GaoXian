@@ -2,6 +2,8 @@
 📖 高显《经典力学》习题解答
 📚 Solutions for the textbook 《经典力学》 by 高显.
 
+----
+
 ## 🔗Contents of Repo.
 This repository contains LaTeX solutions and symbolic computations for the textbook 《经典力学》 by 高显.
 ```
@@ -17,6 +19,8 @@ This repository contains LaTeX solutions and symbolic computations for the textb
 │   └── setting.tex         # LaTeX configuration and packages
 └── 经典力学_高显(2022).pdf   # Reference textbook (Classical Mechanics by Gao Xian, 2022)
 ```
+
+----
 
 ## ✅ Chapter Progress
 
@@ -41,5 +45,15 @@ This repository contains LaTeX solutions and symbolic computations for the textb
 | Ch.17   | ⬜ Not started | ⬜ Not proofread |
 
 
+
+----
+## 📌 Version and License
+
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/Phiyu/GaoXian)
+![GitHub](https://img.shields.io/github/license/Phiyu/GaoXian)
+
+This repository is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
+
+----
 ### 注：
 由于个人编写习惯不同，答案格式略有差异，强迫症见谅
