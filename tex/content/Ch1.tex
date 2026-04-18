@@ -10,7 +10,7 @@
     得到
     \[\frac{\me^{V(f(t))} \left(\left(f'(t)^2-1\right) V'(f(t))-f''(t)\right)}{\left(1-f'(t)^2\right)^{3/2}}=0\]
     排除所有非零项，最终结果为
-    \[\left(f'(t)^2-1\right) V'(f(t))-f''(t)=0\]
+    \[\left(f'(t)^2-1\right) V'(f(t))+f''(t)=0\]
     若\(V(f(t))\)是一个常数，那么上式对应\(f''(t)=0\)。
 \end{solution}
 
@@ -124,7 +124,13 @@
     \end{enumerate}}
 \begin{solution}
     \begin{enumerate}[label=(\arabic*)]
-        \item \(S[x,y] = \int \dd \lambda \sqrt{x'^2 + y'^2} = \int \dd \lambda L\left(x',y'\right)\)
+        \item 泛函\( S[x,y] \)为
+        \begin{align*}
+        	S[x,y]  &= \int \dd \lambda \sqrt{x'^2 + y'^2 + z'^2} 
+        	= \int \dd \lambda \sqrt{x'^2 + y'^2 + \left(\frac{\pp z}{\pp x} x' + \frac{\pp z}{\pp y} y'\right)^2} \\
+        	&= \int \dd \lambda \sqrt{\left[1 + \left(\frac{\pp z}{\pp x}\right)^2\right] x'^2 + 2 \frac{\pp z}{\pp x} \frac{\pp z}{\pp y} x' y' + \left[1 + \left(\frac{\pp z}{\pp y}\right)^2\right] y'^2}\\
+        	&= \int \dd \lambda L\left(x',y'\right)
+        \end{align*}
         \item 先对\(x(\lambda)\)做变分, \[
         \begin{aligned}
             \delta S = \int \dd \lambda \left(\frac{\pp L}{\pp x'} \delta x'\right) &= \int \dd \lambda \left(\frac{x'}{\sqrt{x'^2+y'^2}}\right) \delta x' \\

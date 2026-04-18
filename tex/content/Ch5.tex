@@ -127,14 +127,98 @@
 \end{figure}
 	
 \begin{solution}
-	待施工.
+	（1）约束方程：$\phi-\omega t=0$，为非定常完整约束。$\phi$ 由 $t$ 唯一确定，不是独立变量，故取小球到转轴距离 $r$ 为广义坐标。
+	
+	势能 $V=0$。
+	
+	动能
+	\[
+	T=\frac{1}{2}m\bigl(\dot r^{2}+r^{2}\dot\phi^{2}\bigr)=\frac{1}{2}m\bigl(\dot r^{2}+r^{2}\omega^{2}\bigr).
+	\]
+	
+	Lagrange 量
+	\[
+	L=T-V=\frac{1}{2}m\bigl(\dot r^{2}+r^{2}\omega^{2}\bigr).
+	\]
+	
+	\[
+	\frac{\partial L}{\partial r}=mr\omega^{2},\qquad 
+	\frac{\partial L}{\partial\dot r}=m\dot r.
+	\]
+	
+	\[
+	\frac{\mathrm d}{\mathrm dt}\!\left(\frac{\partial L}{\partial\dot r}\right)-\frac{\partial L}{\partial r}=0
+	\quad\Longrightarrow\quad
+	\ddot r=\omega^{2}r,
+	\]
+	即为小球运动方程。
+	
+	（2）能量函数
+	\[
+	h=\sum p_{i}\dot q_{i}-L
+	=\dot r\cdot m\dot r-\frac{1}{2}m\bigl(\dot r^{2}+r^{2}\omega^{2}\bigr)
+	=\frac{1}{2}m\dot r^{2}-\frac{1}{2}mr^{2}\omega^{2}.
+	\]
+	
+	由能量函数普遍定理，$\displaystyle\frac{\mathrm dh}{\mathrm dt}=-\frac{\partial L}{\partial t}=0$，故 $h$ 为运动常数。
+	
+	（3）不相等。
+	
+	\[
+	E=T+V=\frac{1}{2}m\bigl(\dot r^{2}+r^{2}\omega^{2}\bigr),\qquad
+	h=\frac{1}{2}m\dot r^{2}-\frac{1}{2}mr^{2}\omega^{2}.
+	\]
+	
+	广义坐标到直角坐标的变换方程为
+	\[
+	\begin{cases}
+		x=r\cos\omega t,\\[4pt]
+		y=r\sin\omega t.
+	\end{cases}
+	\]
+	
+	显含 $t$，导致 $T$ 不是 $\dot r$ 的二次齐次式，可分解为
+	\[
+	T=T_{2}+T_{0}=\frac{1}{2}m\dot r^{2}+\frac{1}{2}mr^{2}\omega^{2}.
+	\]
+	
+	此时 $h=T_{2}-T_{0}$，$E=T_{2}+T_{0}$，故 $h\neq E$。
+	
+	（4）不是。绳对小球的横向约束力为非保守力且做功。
 \end{solution}
 
 
 
-\problem{}
+\problem{如图\ref{fig:5-8}所示，两个质量分别为 \(m_1\) 和 \(m_2\) 的粒子，限制在半径为 \(R\) 的光滑球面上运动。设两粒子之间有相互作用势能 \(V = V_0 (1 - \cos \alpha)\)，这里 \(V_0\) 是常数， \(\alpha\) 为两粒子相对球心的张角。选择合适的广义坐标，写出系统的拉格朗日量，并分析其运动常数。}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.3\textwidth]{content/Figures/5-8}
+	\caption{ }
+	\label{fig:5-8}
+\end{figure}
+
 \begin{solution}
-	待施工.
+	广义坐标：对质点 $m_{i}$，取极角 $\theta_{i}$ 与方位角 $\phi_{i}$ $(i=1,2)$。
+	\[
+	T=\frac{1}{2}m_{1}R^{2}\bigl(\dot\theta_{1}^{2}+\sin^{2}\theta_{1}\,\dot\phi_{1}^{2}\bigr)
+	+\frac{1}{2}m_{2}R^{2}\bigl(\dot\theta_{2}^{2}+\sin^{2}\theta_{2}\,\dot\phi_{2}^{2}\bigr),
+	\]
+	\[
+	V=V_{0}(1-\cos\alpha)
+	=V_{0}\bigl[1-\cos\theta_{1}\cos\theta_{2}-\sin\theta_{1}\sin\theta_{2}\cos(\phi_{1}-\phi_{2})\bigr],
+	\]
+	\begin{align*}
+		L&=T-V\\
+		&=\frac{1}{2}m_{1}R^{2}\bigl(\dot\theta_{1}^{2}+\sin^{2}\theta_{1}\,\dot\phi_{1}^{2}\bigr)
+		+\frac{1}{2}m_{2}R^{2}\bigl(\dot\theta_{2}^{2}+\sin^{2}\theta_{2}\,\dot\phi_{2}^{2}\bigr)\\
+		&\quad-V_{0}\bigl[1-\cos\theta_{1}\cos\theta_{2}-\sin\theta_{1}\sin\theta_{2}\cos(\phi_{1}-\phi_{2})\bigr].
+	\end{align*}
+	
+	\begin{enumerate}
+		\item $L$ 不显含 $t\;\Rightarrow\;$ 能量函数 $h$ 是运动常数。
+		\item $h=T+V=E\;\Rightarrow\;$ 系统总机械能 $E$ 是运动常数。
+		\item 系统具有球对称性，故角动量 $\vec L$ 及其各个分量 $L_{x},L_{y},L_{z}$ 均为运动常数。
+	\end{enumerate}
 \end{solution}
 
 
